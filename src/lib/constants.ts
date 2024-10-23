@@ -14,9 +14,9 @@ export const organizationInfo = {
   fullName: "K'Cho Ethnic Association Malaysia",
   shortName: 'CEAM',
   pronunciation: "Cho (/tʃoʊ/)",
-  type: 'Informal community-based organization (CBO)',
+  type: 'community-based organization (CBO)',
   legalStatus: 'Not formally registered due to refugee status in Malaysia',
-  estimatedPopulation: '4,000 to 7,000 Mindat K\'Cho refugees in Malaysia',
+  estimatedPopulation: '4,000 to 8,000 Mindat K\'Cho refugees in Malaysia',
   language: {
     primary: 'K\'Cho (synonymous with Mün)',
     secondary: 'Daai',
