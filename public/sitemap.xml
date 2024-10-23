@@ -6,37 +6,37 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://ceamalaysia.org/</loc>
-    <lastmod>2024-10-23T12:06:26.202Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.062Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ceamalaysia.org/about</loc>
-    <lastmod>2024-10-23T12:06:26.210Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.063Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ceamalaysia.org/initiatives</loc>
-    <lastmod>2024-10-23T12:06:26.210Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.063Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ceamalaysia.org/learning-centers</loc>
-    <lastmod>2024-10-23T12:06:26.210Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.063Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ceamalaysia.org/shelter</loc>
-    <lastmod>2024-10-23T12:06:26.210Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.063Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ceamalaysia.org/contact</loc>
-    <lastmod>2024-10-23T12:06:26.210Z</lastmod>
+    <lastmod>2024-10-23T15:58:26.063Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

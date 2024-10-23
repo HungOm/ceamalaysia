@@ -15,7 +15,7 @@ export default function About() {
       <Section>
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            {organizationInfo.fullName} ({organizationInfo.shortName}) is a {organizationInfo.type} supporting K'Cho refugees and asylum-seekers in Malaysia. Our community consists of individuals who have fled conflict and persecution in Myanmar, seeking safety and a chance for a better life.
+            {organizationInfo.fullName} ({organizationInfo.shortName}) is a {organizationInfo.type} supporting K&apos;Cho refugees and asylum-seekers in Malaysia. Our community consists of individuals who have fled conflict and persecution in Myanmar, seeking safety and a chance for a better life.
           </p>
 
           <h3 className="text-2xl font-bold mt-8 mb-4">Who Are the K'Cho People?</h3>
