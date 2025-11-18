@@ -270,7 +270,7 @@ export const seoConfig = {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+60-XX-XXXX-XXXX",
+        "telephone": "+60-11-6812-8634",
         "contactType": "customer service",
         "email": "contact@ceamalaysia.org",
         "availableLanguage": ["English", "Malay", "K'Cho", "Chin"]

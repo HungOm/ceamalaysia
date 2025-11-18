@@ -109,9 +109,15 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+60123456789" className="text-gray-600 hover:text-blue-600 transition-colors">
-                      +60 12-345-6789
+                    <h3 className="font-semibold text-gray-900 mb-1">Phone / WhatsApp</h3>
+                    <a 
+                      href="https://wa.me/601168128634" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                    >
+                      +60 11-6812 8634
+                      <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">WhatsApp</span>
                     </a>
                   </div>
                 </div>

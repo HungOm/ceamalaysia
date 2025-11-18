@@ -87,8 +87,8 @@ export default function Hero({
       </div>
       
       {showScrollIndicator && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce w-full flex justify-center">
-          <div className="flex flex-col items-center text-white/90 hover:text-white cursor-pointer transition-colors">
+        <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center items-center">
+          <div className="flex flex-col items-center text-white/90 hover:text-white cursor-pointer transition-colors animate-bounce">
             <span className="text-sm font-medium mb-2">Scroll to explore</span>
             <ChevronDown className="w-6 h-6" />
           </div>

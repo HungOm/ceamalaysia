@@ -4,12 +4,15 @@ export const siteConfig = {
   description: "Supporting and uplifting the K'Cho refugee community in Malaysia through protection services, cultural preservation, education, and community-driven initiatives.",
   url: 'https://ceamalaysia.org',
   ogImage: 'https://ceamalaysia.org/og.jpg',
+  phone: '+60 11-6812 8634',
+  phoneWhatsApp: '601168128634', // For WhatsApp link (no +, spaces, or dashes)
   links: {
     facebook: 'https://facebook.com/ceamalaysia',
     twitter: 'https://twitter.com/ceamalaysia',
     instagram: 'https://instagram.com/ceamalaysia',
     linkedin: 'https://linkedin.com/company/ceamalaysia',
-    email: 'contact@ceamalaysia.org'
+    email: 'contact@ceamalaysia.org',
+    whatsapp: 'https://wa.me/601168128634'
   }
 };
 

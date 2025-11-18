@@ -140,9 +140,15 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
-                  +60 XX-XXXX-XXXX
-                </span>
+                <a 
+                  href="https://wa.me/601168128634" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  +60 11-6812 8634
+                  <span className="ml-1 text-xs">(WhatsApp)</span>
+                </a>
               </li>
             </ul>
           </div>
