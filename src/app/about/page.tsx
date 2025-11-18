@@ -35,7 +35,9 @@ export default function About() {
           <h3 className="text-2xl font-bold mt-8 mb-4">Our Mission</h3>
           <ul>
             {missionVision.mission.map((missionStatement, index) => (
-              <li key={index} className="mb-4">{missionStatement}</li>
+              <li key={index} className="mb-4">
+                <strong className="text-lg">{missionStatement.title}:</strong> {missionStatement.description}
+              </li>
             ))}
           </ul>
 

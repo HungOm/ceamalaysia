@@ -1,12 +1,21 @@
 // src/app/layout.tsx
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { seoConfig } from '@/lib/seo-config'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const poppins = Poppins({ 
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+})
 
 export const metadata: Metadata = {
   title: seoConfig.default.title,
@@ -23,7 +32,7 @@ export const metadata: Metadata = {
         url: 'https://ceamalaysia.org/images/cea-social-share.png',
         width: 1200,
         height: 630,
-        alt: "K'Cho Ethnic Association Malaysia",
+        alt: "K'Cho Ethnic Association Malaysia - Empowering Communities, Preserving Heritage",
       }
     ],
   },
@@ -36,11 +45,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://ceamalaysia.org'
   },
-  authors: [{ name: 'CEA Malaysia' }],
+  authors: [{ name: 'CEAM' }],
   robots: {
     index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -52,20 +61,26 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'HzImGeUsmCR8sd4oCmARzvMOL8WemXqNNclqFOaeUbc',
-    yandex: 'verification_token',
-    yahoo: 'verification_token',
-    other: {
-      me: ['my-email@ceamalaysia.org'],
-    },
   },
   metadataBase: new URL('https://ceamalaysia.org'),
   manifest: '/manifest.json',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+    ],
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
-  category: 'non-profit organization'
+  category: 'non-profit organization',
+}
+
+// Viewport configuration moved to separate export (Next.js 14+ requirement)
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -74,15 +89,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+      <body className={`${inter.className} min-h-screen`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow animate-fade-in">{children}</main>
           <Footer />
         </div>
       </body>
     </html>
   )
 }
-

@@ -50,9 +50,20 @@ export default function Initiatives() {
               <p className="text-lg mb-6">{initiative.description}</p>
               <ul className="space-y-2">
                 {initiative.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-center">
-                    <span className="mr-2">•</span>
-                    {detail}
+                  <li key={idx} className="flex items-start">
+                    <span className="mr-2 mt-1">•</span>
+                    <div>
+                      {typeof detail === 'string' ? (
+                        <span>{detail}</span>
+                      ) : (
+                        <>
+                          <span className="font-semibold">{detail.title}</span>
+                          {detail.description && (
+                            <span className="text-gray-600"> - {detail.description}</span>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>

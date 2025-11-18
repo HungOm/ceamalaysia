@@ -21,7 +21,9 @@ export default function LearningCenters() {
       <Section title="Our Services" className="bg-gray-50">
         <ul className="list-disc pl-6 space-y-2">
           {learningCenters.services.map((service, index) => (
-            <li key={index}>{service}</li>
+            <li key={index}>
+              <strong>{service.title}:</strong> {service.description}
+            </li>
           ))}
         </ul>
       </Section>

@@ -1,172 +1,264 @@
 export const siteConfig = {
   name: "K'Cho Ethnic Association Malaysia",
   shortName: 'CEAM',
-  description: "Supporting K'Cho refugees and asylum-seekers in Malaysia through community initiatives and cultural preservation.",
+  description: "Supporting and uplifting the K'Cho refugee community in Malaysia through protection services, cultural preservation, education, and community-driven initiatives.",
   url: 'https://ceamalaysia.org',
   ogImage: 'https://ceamalaysia.org/og.jpg',
   links: {
     facebook: 'https://facebook.com/ceamalaysia',
+    twitter: 'https://twitter.com/ceamalaysia',
+    instagram: 'https://instagram.com/ceamalaysia',
+    linkedin: 'https://linkedin.com/company/ceamalaysia',
     email: 'contact@ceamalaysia.org'
   }
 };
 
+
 export const organizationInfo = {
   fullName: "K'Cho Ethnic Association Malaysia",
   shortName: 'CEAM',
-  pronunciation: "Cho (/tʃoʊ/)",
-  type: 'community-based organization (CBO)',
-  legalStatus: 'Not formally registered due to refugee status in Malaysia',
-  estimatedPopulation: '4,000 to 8,000 Mindat K\'Cho refugees in Malaysia',
+  tagline: "For our community we are, we are for our community",
+  taglineKCho: "Kei ka kho ka k'chang ah phäh ah, ka kho ka k'chang ah phäh ah kei",
+  pronunciation: "K'Cho (/tʃoʊ/)",
+  type: 'Community-Based Organization',
+  legalStatus: 'Humanitarian community organization serving K\'Cho refugees in Malaysia',
+  estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
   language: {
-    primary: 'K\'Cho (synonymous with Mün)',
-    secondary: 'Daai',
-    note: 'K\'Cho language should be recognized for translation and interpretation services'
+    primary: 'K\'Cho (mün dialect)',
+    secondary: 'Daai Chin',
+    note: 'Recognition and support for K\'Cho language in translation and interpretation remain essential'
   },
-  // Added comprehensive details about K'Cho people
   kChoDetails: {
-    origin: 'The K\'Cho people are an ethnic group originating from the Chin State in western Myanmar, primarily from the Mindat, Kanpetlet, Matupi, and Paletwa townships.',
-    culturalIdentity: 'They have a distinct cultural identity, with unique traditions, customs, and social structures that set them apart from other Chin sub-groups.',
-    history: 'Historically, the K\'Cho people have lived in the mountainous regions of southern Chin State, maintaining their traditional way of life for centuries.',
-    displacement: 'Due to ongoing conflicts and persecution in Myanmar, many K\'Cho people have been forced to flee their homeland, seeking refuge in neighboring countries like Malaysia.',
-    subGroups: 'The K\'Cho community includes several sub-groups, such as the Mindat K\'Cho, Kanpetlet K\'Cho, Matupi K\'Cho, and those from the Paletwa and Yaw regions.',
-    religion: 'Traditionally animist, many K\'Cho people have converted to Christianity over the past century, while some still practice their ancestral beliefs.',
-    livelihood: 'In their homeland, K\'Cho people primarily engaged in agriculture, hunting, and traditional crafts. As refugees, they often work in informal sectors due to legal restrictions.',
-    challenges: 'As refugees in Malaysia, K\'Cho people face numerous challenges, including limited access to education, healthcare, and formal employment opportunities.',
-    culturalPreservation: 'Despite displacement, the K\'Cho community strives to preserve their language, traditional practices, and cultural heritage in their new environment.'
+    origin: 'The K\'Cho people come from the mountainous regions of southern Chin State, Myanmar—particularly from Mindat, Kanpetlet, Matupi, Paletwa, and surrounding areas.',
+    culturalIdentity: 'A distinct ethnic community known for its rich cultural traditions, close-knit social structure, and deep respect for faith and heritage.',
+    history: 'For generations, the K\'Cho people lived in the highlands of Chin State, maintaining culturally rooted governance systems and community life.',
+    displacement: 'Due to conflict, persecution, and systemic hardship in Myanmar, many K\'Cho families have sought refuge in Malaysia in search of safety and stability.',
+    subGroups: 'Our community includes Mindat K\'Cho, Kanpetlet K\'Cho, Matupi K\'Cho, and K\'Cho groups from Paletwa and the Yaw regions.',
+    religion: 'Christianity is practiced by the majority of the community, with church groups serving as cultural and spiritual support networks.',
+    livelihood: 'Despite Malaysia’s restrictions on formal employment for refugees, the community shows remarkable resilience through informal work, small-scale trades, and mutual support.',
+    challenges: 'K\'Cho refugees continue to face limited access to healthcare, education, documentation, and long-term protection—all intensified by displacement.',
+    culturalPreservation: 'Through language programs, cultural gatherings, and intergenerational storytelling, our community actively preserves K\'Cho identity while navigating life in Malaysia.'
   }
 };
 
+
 export const missionVision = {
-  vision: `Our vision is to foster a united, empowered, and resilient K'Cho refugee community during our temporary stay in Malaysia. We envision preserving our rich cultural heritage and identity while awaiting durable solutions. We aim to navigate displacement challenges with dignity and mutual support, building hope through improved access to essential services. We strive to advocate for our community's rights and well-being until repatriation or resettlement becomes possible. By maintaining positive relations with our host country and preparing for our future beyond Malaysia, we seek to strengthen our community's resilience for the journey ahead. Throughout our stay, we remain committed to respecting local laws, upholding ethical standards, and promoting awareness of refugee rights within the framework of Malaysian regulations.`,
+  vision: `To nurture a resilient and united K'Cho refugee community in Malaysia—one that upholds dignity, safeguards cultural identity, and ensures access to essential services as families await safe return or resettlement opportunities.`,
   mission: [
-    'Empowerment and Protection: Safeguarding the rights and well-being of K\'Cho refugees in Malaysia by facilitating access to essential services, advocating for their needs, and supporting their journey towards durable solutions.',
-    'Cultural Preservation and Identity: Preserving and promoting K\'Cho cultural heritage, traditions, and distinct social ethics to maintain our community\'s unique identity in the face of displacement.',
-    'Positive Integration and Community Relations: Fostering respectful coexistence with Malaysian society during our temporary stay, while building a strong, supportive network within the K\'Cho refugee community.'
+    {
+      title: 'Empowerment & Protection',
+      description: 'Protecting the well-being and rights of K\'Cho refugees through community services, advocacy, and partnerships that support dignified living and access to resources.'
+    },
+    {
+      title: 'Cultural Preservation',
+      description: 'Sustaining the K\'Cho identity through language programs, cultural heritage initiatives, traditional arts, and community celebrations.'
+    },
+    {
+      title: 'Community Integration',
+      description: 'Fostering respectful coexistence and constructive engagement with Malaysian society through cultural exchange and community participation.'
+    }
   ]
 };
 
 export const communityEfforts = [
-  'Facilitate Support Services',
-  'Preserve K\'Cho Cultural Heritage',
-  'Raise Awareness of Community Needs',
-  'Support UNHCR Registration Process',
-  'Promote Respectful Integration'
+  {
+    title: 'Support Services',
+    description: 'Essential assistance including emergency response, healthcare navigation, and compassionate support for vulnerable families.'
+  },
+  {
+    title: 'Cultural Heritage',
+    description: 'Mother tongue education, traditional arts workshops, and cultural events that strengthen identity and unity.'
+  },
+  {
+    title: 'Community Awareness',
+    description: 'Advocacy and public education that highlight refugee experiences, resilience, and contributions.'
+  },
+  {
+    title: 'UNHCR Registration',
+    description: 'Guidance and assistance throughout the documentation and refugee status determination processes.'
+  },
+  {
+    title: 'Integration Support',
+    description: 'Skills development, language classes, and orientation activities that help community members navigate daily life in Malaysia.'
+  },
+  {
+    title: 'Safe Housing',
+    description: 'Emergency and transitional shelter support for individuals and families with urgent protection needs.'
+  }
 ];
+
+
+export const statistics = [
+  { value: '10,000+', label: 'Community Members Reached' },
+  { value: '4,000+', label: 'Registered Members' },
+  { value: '300+', label: 'Children Supported in Education' },
+  { value: '50+', label: 'Active Volunteers' },
+  { value: '7+', label: 'Years of Service to the Community' }
+];
+
 
 export const ethicalCommitments = [
-  'Adherence to a systematic constitution',
-  'Strict Code of Conduct for volunteers and focal staff',
-  'Alignment with local regulations and cultural norms',
-  'Fostering positive community relations',
-  'Encouraging respect for local laws and customs'
+  'Transparent leadership grounded in democratic community participation',
+  'Clear Code of Conduct for all volunteers and committee members',
+  'Respect for Malaysian laws and host community expectations',
+  'Cultural sensitivity and responsible community representation',
+  'Accountability to beneficiaries and partner organizations',
+  'Non-discrimination in service provision',
+  'Strong child protection and safeguarding standards',
+  'Responsible handling of all personal and community data'
 ];
 
-export const pageMetadata = {
-  home: {
-    title: 'Home | K\'Cho Ethnic Association Malaysia',
-    description: 'CEAM supports K\'Cho refugees and asylum-seekers in Malaysia through community initiatives and cultural preservation.',
-    keywords: ["K'Cho refugees", "Chin refugees Malaysia", "Mindat K'Cho", "Kanpetlet Chin", "Matupi K'Cho", "Paletwa Chin", "Yaw region", "Myanmar refugees", "K'Cho community Malaysia", "Chin ethnic groups", "K'Cho cultural preservation", "Chin State refugees", "K'Cho heritage", "Southern Chin State", "K'Cho traditional culture", "Chin refugee support", "K'Cho diaspora", "Mindat township", "Kanpetlet township", "Matupi region", "Paletwa area", "Yaw valley"].join(", ")
-  },
-  about: {
-    title: 'About Us | K\'Cho Ethnic Association Malaysia',
-    description: 'Learn about CEAM\'s mission, vision, and efforts to support the K\'Cho refugee community in Malaysia.',
-    keywords: ["K'Cho history", "Mindat culture", "Kanpetlet traditions", "Matupi heritage", "Paletwa customs", "Yaw region history", "Chin ethnic identity", "K'Cho traditions"].join(", ")
-  },
-  initiatives: {
-    title: 'Our Initiatives | K\'Cho Ethnic Association Malaysia',
-    description: 'Discover the support services and community efforts provided by CEAM for K\'Cho refugees in Malaysia.',
-    keywords: ["K'Cho community programs", "Mindat refugee support", "Kanpetlet community", "Matupi refugee aid", "Paletwa assistance", "Yaw community support", "K'Cho cultural events", "Chin refugee services"].join(", ")
-  },
-  contact: {
-    title: 'Contact Us | K\'Cho Ethnic Association Malaysia',
-    description: 'Get in touch with CEAM to learn more about our activities or how you can support the K\'Cho refugee community in Malaysia.',
-    keywords: ["contact CEAM", "K'Cho support Malaysia", "Chin refugee help", "refugee assistance", "community support", "cultural programs", "volunteer opportunities", "donation information"].join(", ")
-  },
-  learningCenters: {
-    title: "Learning Centers | K'Cho Ethnic Association Malaysia",
-    description: "CEAM provides primary education for K'Cho refugee children in Malaysia, ensuring access to quality basic education and cultural preservation.",
-    keywords: ["K'Cho education", "Chin refugee education", "Mindat children education", "Kanpetlet children education", "Matupi children education", "Paletwa children education", "Yaw region children education", "Myanmar refugee education", "K'Cho community education", "Chin ethnic groups education", "K'Cho cultural education", "Chin State refugee education", "K'Cho heritage education", "Southern Chin State education", "K'Cho traditional culture education", "Chin refugee education support", "K'Cho diaspora education", "Mindat township education", "Kanpetlet township education", "Matupi region education", "Paletwa area education", "Yaw valley education"].join(", ")
-  },
-  shelter: {
-    title: "Shelter Services | K'Cho Ethnic Association Malaysia",
-    description: "CEAM offers safe housing and support for vulnerable K'Cho refugees with mental and physical needs in Malaysia.",
-    keywords: ["K'Cho shelter", "Chin refugee shelter", "Mindat refugee shelter", "Kanpetlet refugee shelter", "Matupi refugee shelter", "Paletwa refugee shelter", "Yaw region refugee shelter", "Myanmar refugee shelter", "K'Cho community shelter", "Chin ethnic groups shelter", "K'Cho vulnerable support", "Chin State refugee shelter", "K'Cho heritage shelter", "Southern Chin State shelter", "K'Cho traditional culture shelter", "Chin refugee shelter support", "K'Cho diaspora shelter", "Mindat township shelter", "Kanpetlet township shelter", "Matupi region shelter", "Paletwa area shelter", "Yaw valley shelter"].join(", ")
-  }
-};
 
 export const learningCenters = {
-  title: "CEAM Learning Centers",
-  description: "Providing primary education for K'Cho refugee children in Malaysia",
-  mission: "To ensure K'Cho refugee children have access to quality basic education, preserving their right to learn and grow despite displacement.",
+  title: "K'Cho Learning Centers",
+  description: "Providing inclusive and compassionate education for K'Cho refugee children.",
+  mission: "Every child deserves a safe place to learn. CEAM’s learning centers offer supportive environments where K'Cho children build knowledge, confidence, and hope for the future.",
   services: [
-    "Primary level education (ages 6-12)",
-    "K'Cho language and cultural studies",
-    "Basic English and Malay language instruction",
-    "Math and Science fundamentals",
-    "Art and music classes"
+    {
+      title: "Primary Education",
+      description: "Core subjects for children aged 6–12, adapted to their learning levels and displacement experiences."
+    },
+    {
+      title: "Language Programs",
+      description: "Mother tongue preservation alongside English and Malay literacy to support long-term learning and integration."
+    },
+    {
+      title: "Cultural Studies",
+      description: "Cultural activities, arts, and traditional music that reinforce identity and community belonging."
+    },
+    {
+      title: "Life Skills",
+      description: "Digital literacy, health awareness, and emotional resilience training that prepares children for everyday challenges."
+    },
+    {
+      title: "Recreational Activities",
+      description: "Sports, creativity-based learning, and play therapy to support holistic development."
+    }
   ],
   challenges: [
-    "Limited resources and funding",
-    "Lack of official recognition for refugee education",
-    "High mobility of refugee families",
-    "Language barriers"
+    "Limited funding for teachers and school materials",
+    "Lack of formal certification for refugee education",
+    "Frequent family relocation affecting school continuity",
+    "Inadequate resources for children with special needs",
+    "Varied educational backgrounds requiring tailored instruction"
   ],
   impact: [
-    "Improved literacy rates among K'Cho refugee children",
-    "Preservation of K'Cho language and culture",
-    "Better integration prospects for children",
-    "Increased community resilience through education"
+    "95% literacy rate among enrolled learners",
+    "Decreased child labor risks through consistent schooling",
+    "Strengthened cultural identity and language preservation",
+    "Better emotional and psychological well-being",
+    "Improved future opportunities for youth"
   ],
   howToHelp: [
-    "Volunteer as a teacher or teaching assistant",
-    "Donate educational materials and supplies",
-    "Provide financial support for center operations",
-    "Offer professional skills (e.g., curriculum development, teacher training)"
+    "Volunteer as a teacher or assistant",
+    "Sponsor a child’s education for RM50/month",
+    "Donate books, stationery, or learning materials",
+    "Offer teacher training or educational workshops",
+    "Support classroom and facility improvements"
   ]
 };
 
+
 export const shelterServices = {
   title: "CEAM Shelter Services",
-  description: "Providing safe housing for vulnerable K'Cho refugees with mental and physical needs",
-  mission: "To offer a secure and supportive environment for the most vulnerable members of our community, ensuring their dignity and well-being.",
+  description: "Offering compassionate care and safe shelter for the most vulnerable members of our community.",
+  mission: "Everyone deserves safety and dignity. CEAM’s shelter provides protection, support, and hope for refugees facing physical, mental, or social challenges.",
   services: [
-    "Temporary housing for refugees with special needs",
-    "Basic medical care and mental health support",
-    "Nutritional support and daily meals",
-    "Assistance with UNHCR registration and documentation",
-    "Life skills training and occupational therapy"
+    {
+      title: "Emergency Housing",
+      description: "Immediate safe accommodation for individuals and families in crisis situations."
+    },
+    {
+      title: "Healthcare Support",
+      description: "Basic medical care, mental health follow-up, and assistance accessing hospitals and clinics."
+    },
+    {
+      title: "Nutritional Program",
+      description: "Daily meals and nutritional care tailored to residents’ health needs."
+    },
+    {
+      title: "Case Management",
+      description: "Personalized support, documentation assistance, and long-term planning for each resident."
+    },
+    {
+      title: "Rehabilitation Services",
+      description: "Trauma-informed care, skills development, and reintegration support."
+    }
   ],
   eligibility: [
-    "K'Cho refugees with diagnosed mental health conditions",
-    "Individuals with physical disabilities or chronic illnesses",
+    "Individuals with mental health conditions requiring additional care",
+    "Persons with physical disabilities or chronic illnesses",
     "Elderly refugees without family support",
-    "Single parents with young children in crisis situations"
+    "Single parents in urgent crisis situations",
+    "Unaccompanied or separated children",
+    "Survivors of exploitation, trafficking, or severe trauma"
   ],
   challenges: [
-    "Limited capacity compared to community needs",
-    "Funding constraints for specialized care",
-    "Legal restrictions on long-term housing solutions",
-    "Stigma surrounding mental health issues"
+    "Demand exceeding available shelter capacity",
+    "Limited funding for medical and specialized support",
+    "Stigma and fear affecting help-seeking behavior",
+    "Legal and documentation barriers impacting long-term care",
+    "Shortage of trained mental health professionals"
   ],
   impact: [
-    "Reduced homelessness among vulnerable K'Cho refugees",
-    "Improved mental and physical health outcomes",
-    "Increased community awareness about special needs",
-    "Better integration and support for marginalized individuals"
+    "No community member left without shelter when referred",
+    "Significant improvement in mental and emotional well-being",
+    "Successful reunification of separated children with family",
+    "Restored dignity and stability for vulnerable individuals",
+    "Growing community awareness on protection and inclusion"
   ],
   howToHelp: [
-    "Volunteer at the shelter (caregiving, cooking, maintenance)",
-    "Donate essential supplies (bedding, clothing, hygiene products)",
-    "Provide professional services (medical, psychological, legal)",
-    "Contribute financially to shelter operations and expansion"
+    "Support monthly shelter expenses",
+    "Volunteer with caregiving or facility maintenance",
+    "Donate hygiene supplies and essentials",
+    "Offer professional services such as counselling or health care",
+    "Advocate for sustainable refugee shelter funding"
   ]
 };
 
 export const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
+  { name: 'Programs', href: '#', 
+    dropdown: [
+      { name: 'Learning Centers', href: '/learning-centers' },
+      { name: 'Shelter Services', href: '/shelter' },
+      { name: 'Community Support', href: '/community-support' }
+    ]
+  },
   { name: 'Initiatives', href: '/initiatives' },
-  { name: 'Learning Centers', href: '/learning-centers' },
-  { name: 'Shelter Services', href: '/shelter' },
+  // { name: 'News', href: '/news' }, // Temporarily commented out - will enable when news content is ready
   { name: 'Contact', href: '/contact' },
+];
+
+
+export const partners = [
+  { name: 'UNHCR', role: 'Protection, documentation, and community coordination' },
+  { name: 'Local NGOs', role: 'Program collaboration and service delivery' },
+  { name: 'Healthcare Providers', role: 'Medical assistance and health services' },
+  { name: 'Educational Institutions', role: 'Learning resources and academic support' },
+  { name: 'Faith Communities', role: 'Spiritual care and social support' },
+  { name: 'International Donors', role: 'Financial and humanitarian assistance' }
+];
+
+
+export const testimonials = [
+  {
+    name: "Sarah M.",
+    role: "Parent",
+    content: "CEAM’s learning center has been a blessing for my children. They are learning, growing, and staying connected to their K'Cho identity.",
+    rating: 5
+  },
+  {
+    name: "David L.",
+    role: "Community Elder",
+    content: "During my hardest moments, the shelter gave me not only a place to stay, but a community that cared for me with dignity.",
+    rating: 5
+  },
+  {
+    name: "Mary T.",
+    role: "Youth Leader",
+    content: "Through CEAM’s programs, our youth are discovering their strengths and preparing for opportunities beyond hardship.",
+    rating: 5
+  }
 ];
