@@ -27,8 +27,8 @@ export const organizationInfo = {
   legalStatus: 'Humanitarian community organization serving K\'Cho refugees in Malaysia',
   estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
   language: {
-    primary: 'K\'Cho (mün dialect)',
-    secondary: 'Dai(Daai) , M\'Kaang  and Daa Yindu dialects',
+    primary: 'K\'Cho (Mün dialect)',
+    secondary: 'Dai(also Daai) , M\'Kaang  and Daa Yindu dialects',
     note: 'Recognition and support for K\'Cho language in translation and interpretation remain essential'
   },
   kChoDetails: {

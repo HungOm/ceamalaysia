@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
-              <Logo variant="white" />
+              <Logo variant="white" compact={false} />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Empowering K&apos;cho and Chin refugee communities through compassionate support, 

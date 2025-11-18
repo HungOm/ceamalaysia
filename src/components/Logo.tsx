@@ -4,10 +4,11 @@ import Link from 'next/link'
 interface LogoProps {
   variant?: 'default' | 'white'
   showText?: boolean
+  compact?: boolean // When true, shows only icon + acronym (no full name)
   className?: string
 }
 
-export default function Logo({ variant = 'default', showText = true, className = '' }: LogoProps) {
+export default function Logo({ variant = 'default', showText = true, compact = false, className = '' }: LogoProps) {
   return (
     <Link href="/" className={`flex items-center gap-3 group ${className}`}>
       <div className="relative">
@@ -27,9 +28,11 @@ export default function Logo({ variant = 'default', showText = true, className =
           <span className={`font-bold text-xl leading-tight ${variant === 'white' ? 'text-white' : 'text-blue-800'}`}>
             CEAM
           </span>
-          <span className={`text-xs ${variant === 'white' ? 'text-gray-300' : 'text-blue-600'}`}>
-            K&apos;Cho Ethnic Association Malaysia
-          </span>
+          {!compact && (
+            <span className={`text-xs ${variant === 'white' ? 'text-gray-300' : 'text-blue-600'}`}>
+              K&apos;Cho Ethnic Association Malaysia
+            </span>
+          )}
         </div>
       )}
     </Link>
