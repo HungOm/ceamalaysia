@@ -55,14 +55,25 @@ export default function Hero({
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
             {title}
           </h1>
-          <div className="space-y-3 md:space-y-4 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-4 md:space-y-6 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl sm:text-2xl md:text-3xl text-white font-semibold leading-relaxed">
               {subtitle}
             </p>
             {subtitleKCho && (
-              <p className="text-sm sm:text-base md:text-lg text-blue-200/90 italic leading-relaxed font-light">
-                <span className="text-blue-300/80">{subtitleKCho}</span>
-              </p>
+              <div className="flex flex-col items-center space-y-3 pt-4 border-t border-white/20 max-w-2xl mx-auto">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="h-px w-8 bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
+                  <span className="text-xs sm:text-sm text-blue-200/80 font-medium tracking-wider uppercase">
+                    K&apos;Cho
+                  </span>
+                  <div className="h-px w-8 bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
+                </div>
+                <p className="text-base sm:text-lg md:text-xl text-blue-100/95 leading-relaxed font-light italic px-4 relative">
+                  <span className="absolute -left-2 -top-1 text-blue-300/50 text-2xl sm:text-3xl font-serif leading-none">"</span>
+                  <span className="relative z-10">{subtitleKCho.replace(/^["']|["']$/g, '')}</span>
+                  <span className="absolute -right-2 -bottom-2 text-blue-300/50 text-2xl sm:text-3xl font-serif leading-none">"</span>
+                </p>
+              </div>
             )}
           </div>
           

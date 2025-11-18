@@ -24,7 +24,7 @@ export default function Logo({ variant = 'default', showText = true, className =
       </div>
       {showText && (
         <div className="flex flex-col">
-          <span className={`font-bold text-xl leading-tight ${variant === 'white' ? 'text-white' : 'text-blue-900'}`}>
+          <span className={`font-bold text-xl leading-tight ${variant === 'white' ? 'text-white' : 'text-blue-800'}`}>
             CEAM
           </span>
           <span className={`text-xs ${variant === 'white' ? 'text-gray-300' : 'text-blue-600'}`}>

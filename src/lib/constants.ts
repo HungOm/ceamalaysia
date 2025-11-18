@@ -21,7 +21,7 @@ export const organizationInfo = {
   fullName: "K'Cho Ethnic Association Malaysia",
   shortName: 'CEAM',
   tagline: "For our community we are, we are for our community",
-  taglineKCho: "Kei ka kho ka k'chang ah phäh ah, ka kho ka k'chang ah phäh ah kei",
+  taglineKCho: '"Kei ka kho ka k\'chang ah phäh ah, ka kho ka k\'chang ah phäh ah kei"',
   pronunciation: "K'Cho (/tʃoʊ/)",
   type: 'Community-Based Organization',
   legalStatus: 'Humanitarian community organization serving K\'Cho refugees in Malaysia',
