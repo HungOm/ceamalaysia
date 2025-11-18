@@ -155,9 +155,10 @@ export default function ContactPage() {
                 <p className="text-gray-600 text-sm mb-4">
                   For urgent assistance or emergency situations, please contact our 24/7 helpline:
                 </p>
-                <a href="tel:+60198765432" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
+                <a href="https://wa.me/601168128634" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
                   <Phone className="w-4 h-4" />
-                  +60 19-876-5432
+                  +60 11-6812 8634
+                  <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">WhatsApp</span>
                 </a>
               </div>
             </div>
