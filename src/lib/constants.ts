@@ -28,7 +28,7 @@ export const organizationInfo = {
   estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
   language: {
     primary: 'K\'Cho (mün dialect)',
-    secondary: 'Daai Chin',
+    secondary: 'Dai(Daai) , M\'Kaang  and Daa Yindu dialects',
     note: 'Recognition and support for K\'Cho language in translation and interpretation remain essential'
   },
   kChoDetails: {

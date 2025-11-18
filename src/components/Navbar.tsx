@@ -240,7 +240,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     className={`block px-6 py-3.5 text-gray-900 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors font-medium ${
-                      pathname === item.href ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600' : ''
+                      pathname === item.href ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-800' : ''
                     }`}
                     onClick={closeMobileMenu}
                   >
