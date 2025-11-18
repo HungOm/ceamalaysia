@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, ArrowRight, User, Tag } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, User } from 'lucide-react'
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { newsArticles } from '@/lib/news-data'
-import { seoConfig } from '@/lib/seo-config'
 
 export const metadata = {
   title: 'News & Updates | K\'Cho Ethnic Association Malaysia',

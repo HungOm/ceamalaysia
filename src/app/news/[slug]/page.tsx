@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin, ChevronRight } from 'lucide-react'
+import { Calendar, Clock, User, ArrowLeft, ChevronRight } from 'lucide-react'
 import Section from '@/components/Section'
 import SocialShare from '@/components/SocialShare'
 import { newsArticles } from '@/lib/news-data'

@@ -2,15 +2,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration type
-interface EmailConfig {
-  service: string
-  auth: {
-    user: string
-    pass: string
-  }
-}
-
 // Contact form data type
 interface ContactFormData {
   name: string
@@ -189,7 +180,7 @@ export async function POST(request: NextRequest) {
     
     // Create email transporter
     // Note: In production, use environment variables for credentials
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: process.env.EMAIL_SERVICE || 'gmail',
       auth: {
         user: process.env.EMAIL_USER || 'your-email@gmail.com',
