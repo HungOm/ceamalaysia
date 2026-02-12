@@ -20,7 +20,7 @@ export const siteConfig = {
 export const organizationInfo = {
   fullName: "K'Cho Ethnic Association Malaysia",
   shortName: 'CEAM',
-  tagline: "For our community we are, we are for our community",
+  tagline: "For the community, by the community",
   taglineKCho: '"Kei ka kho ka k\'chang ah phäh ah, ka kho ka k\'chang ah phäh ah kei"',
   pronunciation: "K'Cho (/tʃoʊ/)",
   type: 'Community-Based Organization',
@@ -28,20 +28,51 @@ export const organizationInfo = {
   estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
   language: {
     primary: 'K\'Cho (Mün dialect)',
-    secondary: 'Dai(also Daai) , M\'Kaang  and Daa Yindu dialects',
+    secondary: 'Dai (Daai), Daa Yindu, and Ng\'Gah dialects',
+    details: 'The K\'Cho language family exhibits exceptionally high linguistic similarity (87–99%) across its dialects, fostering strong mutual intelligibility. The Mün dialect, originating from the group that established the K\'Cho writing system (often classified linguistically as Choic), serves as the foundational script for all other dialects. Geographically, Mün is primarily spoken in Mindat, while Daa Yindu is a major group in Kanpetlet, alongside Ng\'Gah (a subgroup of Mün). The Dai (Daai) dialect is dispersed across communities within the four southern townships of Chin State.',
     note: 'Recognition and support for K\'Cho language in translation and interpretation remain essential'
   },
   kChoDetails: {
     origin: 'The K\'Cho people come from the mountainous regions of southern Chin State, Myanmar—particularly from Mindat, Kanpetlet, Matupi, Paletwa, and surrounding areas.',
-    culturalIdentity: 'A distinct ethnic community known for its rich cultural traditions, close-knit social structure, and deep respect for faith and heritage.',
+    culturalIdentity: 'As one of the largest and linguistically dominant groups in Southern Chin State, the K\'Cho people are a distinct ethnic community known for their rich cultural traditions, close-knit social structure, and deep respect for faith and heritage. A unique and enduring aspect of K\'Cho heritage is the tradition of facial tattooing among women; although patterns vary distinctively across different tribes within the K\'Cho group, this custom continues to be recognized as a profound symbol of identity.',
     history: 'For generations, the K\'Cho people lived in the highlands of Chin State, maintaining culturally rooted governance systems and community life.',
     displacement: 'Due to conflict, persecution, and systemic hardship in Myanmar, many K\'Cho families have sought refuge in Malaysia in search of safety and stability.',
-    subGroups: 'Our community includes Mindat K\'Cho, Kanpetlet K\'Cho, Matupi K\'Cho, and K\'Cho groups from Paletwa and the Yaw regions.',
+    subGroups: 'The Mindat K\'Cho represent the primary origin group within our community, while we also encompass smaller K\'Cho groups from Kanpetlet, Matupi, Paletwa, and the Yaw regions.',
     religion: 'Christianity is practiced by the majority of the community, with church groups serving as cultural and spiritual support networks.',
     livelihood: 'Despite Malaysia’s restrictions on formal employment for refugees, the community shows remarkable resilience through informal work, small-scale trades, and mutual support.',
-    challenges: 'K\'Cho refugees continue to face limited access to healthcare, education, documentation, and long-term protection—all intensified by displacement.',
+    challenges: 'The K\'Cho community—historically recognized as one of the five original founding groups of Chin State (alongside Zomi, Lai, Khumi, and Matu) and constituting one of the largest demographic cohorts within the Chin refugee population—faces persistent structural marginalization in both Myanmar and Malaysia. This systemic exclusion is most visible in the lack of proportional representation within the Alliance of Chin Refugees (ACR) and Chin Refugee Committee (CRC), and the complete absence of representation within the Independent Chin Communities (ICC). Consequently, the community encounters significant barriers to equitable protection, resource allocation, and advocacy opportunities.',
     culturalPreservation: 'Through language programs, cultural gatherings, and intergenerational storytelling, our community actively preserves K\'Cho identity while navigating life in Malaysia.'
-  }
+  },
+  citations: [
+    {
+      author: "Mang, Kee Shein",
+      year: "2006",
+      title: "A syntactic and pragmatic description of verb stem alternation in K'chò, a Chin language",
+      publication: "Master's thesis, Payap University",
+      note: "Foundational research on K'Cho syntax and verb structure."
+    },
+    {
+      author: "So-Hartmann, Helga",
+      year: "2009",
+      title: "A Descriptive Grammar of Daai Chin",
+      publication: "STEDT Monograph Series, University of California, Berkeley",
+      note: "Comprehensive linguistic analysis of the closely related Daai Chin language."
+    },
+    {
+      author: "Bedell, George & Mang, Kee Shein",
+      year: "2010",
+      title: "The Applicative Suffix -na in K'cho",
+      publication: "Paper presented at the 43rd International Conference on Sino-Tibetan Languages and Linguistics",
+      note: "Detailed study on K'Cho grammatical markers."
+    },
+    {
+      author: "Parkitny, Jens Uwe",
+      year: "2017",
+      title: "Marked for Life: Myanmar's Chin Women and Their Facial Tattoos",
+      publication: "Kerber Verlag",
+      note: "Anthropological documentation of Chin facial tattoo traditions."
+    }
+  ]
 };
 
 
@@ -50,16 +81,26 @@ export const missionVision = {
   mission: [
     {
       title: 'Empowerment & Protection',
-      description: 'Protecting the well-being and rights of K\'Cho refugees through community services, advocacy, and partnerships that support dignified living and access to resources.'
+      description: 'To champion the rights and dignity of every K\'Cho refugee, ensuring their physical well-being through robust community support networks, strategic advocacy, and access to essential humanitarian resources.'
     },
     {
       title: 'Cultural Preservation',
-      description: 'Sustaining the K\'Cho identity through language programs, cultural heritage initiatives, traditional arts, and community celebrations.'
+      description: 'To act as the custodian of K\'Cho heritage, safeguarding our unique identity through the revitalization of our language, the celebration of our living traditions, and the transmission of ancestral wisdom to future generations.'
     },
     {
       title: 'Community Integration',
-      description: 'Fostering respectful coexistence and constructive engagement with Malaysian society through cultural exchange and community participation.'
+      description: 'To build bridges of understanding and mutual respect with Malaysian society, fostering a spirit of constructive engagement and active participation that honors both our host community and our own values.'
     }
+  ],
+  ethicalCommitments: [
+    'Governance anchored in transparency and democratic accountability.',
+    'Strict adherence to a rigorous Code of Conduct for all personnel.',
+    'Unwavering respect for Malaysian laws and the customs of our host community.',
+    'Representation defined by cultural sensitivity and integrity.',
+    'Steadfast accountability to our beneficiaries and partner organizations.',
+    'A commitment to impartiality and non-discrimination in all service provisions.',
+    'Rigorous enforcement of child protection and safeguarding protocols.',
+    'Ethical stewardship of all personal and community data.'
   ]
 };
 
@@ -101,14 +142,14 @@ export const statistics = [
 
 
 export const ethicalCommitments = [
-  'Transparent leadership grounded in democratic community participation',
-  'Clear Code of Conduct for all volunteers and committee members',
-  'Respect for Malaysian laws and host community expectations',
-  'Cultural sensitivity and responsible community representation',
-  'Accountability to beneficiaries and partner organizations',
-  'Non-discrimination in service provision',
-  'Strong child protection and safeguarding standards',
-  'Responsible handling of all personal and community data'
+  'Governance anchored in transparency and democratic accountability.',
+  'Strict adherence to a rigorous Code of Conduct for all personnel.',
+  'Unwavering respect for Malaysian laws and the customs of our host community.',
+  'Representation defined by cultural sensitivity and integrity.',
+  'Steadfast accountability to our beneficiaries and partner organizations.',
+  'A commitment to impartiality and non-discrimination in all service provisions.',
+  'Rigorous enforcement of child protection and safeguarding protocols.',
+  'Ethical stewardship of all personal and community data.'
 ];
 
 
@@ -164,8 +205,19 @@ export const learningCenters = {
 
 export const shelterServices = {
   title: "CEAM Shelter Services",
-  description: "Offering compassionate care and safe shelter for the most vulnerable members of our community.",
+  description: "A UNHCR-recognized safe haven offering compassionate care and protection for the most vulnerable members of our community.",
   mission: "Everyone deserves safety and dignity. CEAM’s shelter provides protection, support, and hope for refugees facing physical, mental, or social challenges.",
+  inclusivity: "The K'Cho Shelter Home welcomes refugees and asylum seekers of all races, ethnicities, and religious backgrounds. Our commitment to compassion knows no boundaries — every person in need is treated with equal dignity and respect. Admission is subject to eligibility criteria and availability.",
+  contact: {
+    name: "Bosco Om Maung",
+    role: "CEAM Shelter In-Charge",
+    phone: "+60 17-953 3189",
+    whatsapp: "https://wa.me/60179533189"
+  },
+  photos: [
+    { src: "/images/shelter/shelter-visit.png", alt: "Shelter staff visiting a resident" },
+    { src: "/images/shelter/shelter-celebration.png", alt: "Shelter residents celebrating together" }
+  ],
   services: [
     {
       title: "Emergency Housing",
@@ -196,6 +248,20 @@ export const shelterServices = {
     "Unaccompanied or separated children",
     "Survivors of exploitation, trafficking, or severe trauma"
   ],
+  guidelines: [
+    {
+      title: "Transitional Support",
+      description: "Our shelter is a temporary haven (typically 3-6 months) designed to help residents stabilize and transition to long-term solutions."
+    },
+    {
+      title: "Safety & Zero Tolerance",
+      description: "To ensure a peaceful environment for all, we maintain a strict zero-tolerance policy regarding violence, harassment, drugs, and alcohol."
+    },
+    {
+      title: "Respect for All",
+      description: "While guided by Christian values of charity, we warmly welcome residents of all beliefs and respect everyone's religious practices equally."
+    }
+  ],
   challenges: [
     "Demand exceeding available shelter capacity",
     "Limited funding for medical and specialized support",
@@ -222,7 +288,8 @@ export const shelterServices = {
 export const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Programs', href: '#', 
+  {
+    name: 'Programs', href: '#',
     dropdown: [
       { name: 'Learning Centers', href: '/learning-centers' },
       { name: 'Shelter Services', href: '/shelter' },

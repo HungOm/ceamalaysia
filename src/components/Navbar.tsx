@@ -69,8 +69,8 @@ export default function Navbar() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { 
-      name: 'Programs', 
+    {
+      name: 'Programs',
       href: '#',
       dropdown: [
         { name: 'Learning Centers', href: '/learning-centers' },
@@ -84,49 +84,52 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' 
-        : 'bg-white/90 backdrop-blur-sm py-4'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled
+      ? 'bg-white/90 backdrop-blur-md border-gray-100 shadow-sm py-2'
+      : 'bg-transparent border-transparent py-4 lg:py-6'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Logo showText={true} compact={false} />
+          <Logo showText={true} compact={true} variant={scrolled ? 'default' : 'white'} />
 
           {/* Desktop menu */}
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <div 
-                    className="relative"
+                  <div
+                    className="relative group"
                     onMouseEnter={() => setDropdownOpen(true)}
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
-                    <button className="nav-link flex items-center gap-1">
+                    <button className={`nav-link flex items-center gap-1 group-hover:opacity-80 transition-opacity ${pathname.startsWith(item.href) && item.href !== '#'
+                      ? (scrolled ? 'text-blue-600 font-semibold' : 'text-white font-bold')
+                      : (scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white/90 hover:text-white')
+                      }`}>
                       {item.name}
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
-                    {dropdownOpen && (
-                      <div className="absolute top-full left-0 pt-2 w-56 z-50">
-                        <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium first:rounded-t-lg last:rounded-b-lg"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden ring-1 ring-black/5">
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-5 py-3.5 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium border-b border-gray-50 last:border-0"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
                       </div>
-                    )}
+                    </div>
                   </div>
                 ) : (
                   <Link
                     href={item.href}
-                    className={`nav-link ${pathname === item.href ? 'text-blue-600' : ''}`}
+                    className={`nav-link transition-opacity hover:opacity-80 ${pathname === item.href
+                      ? (scrolled ? 'text-blue-600 font-semibold' : 'text-white font-bold')
+                      : (scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white/90 hover:text-white')
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -135,9 +138,9 @@ export default function Navbar() {
             ))}
             <Link
               href="/donate"
-              className="btn-primary flex items-center gap-2"
+              className={`${scrolled ? 'btn-primary' : 'bg-white text-blue-900 hover:bg-blue-50'} flex items-center gap-2 shadow-lg transition-all duration-300 font-semibold px-6 py-2.5 rounded-full`}
             >
-              <Heart className="w-4 h-4" />
+              <Heart className={`w-4 h-4 ${scrolled ? 'fill-current' : 'fill-blue-900 text-blue-900'}`} />
               Donate
             </Link>
           </div>
@@ -146,7 +149,10 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-100"
+              className={`p-2.5 rounded-lg transition-colors ${scrolled
+                ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                : 'text-white hover:bg-white/10'
+                }`}
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -161,74 +167,69 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div 
-        className={`lg:hidden fixed inset-0 z-[100] transition-opacity duration-300 ${
-          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+      <div
+        className={`lg:hidden fixed inset-0 z-[100] transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
         aria-hidden={!mobileMenuOpen}
       >
         {/* Backdrop */}
-        <div 
-          className="mobile-menu-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+        <div
+          className="mobile-menu-backdrop absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity duration-300"
           onClick={closeMobileMenu}
           aria-hidden="true"
         />
-        
+
         {/* Menu panel */}
-        <div 
+        <div
           ref={mobileMenuRef}
-          className={`absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl transform transition-transform duration-300 ease-out ${
-            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`absolute right-0 top-0 h-full w-[85%] max-w-md bg-white shadow-2xl transform transition-transform duration-300 ease-out flex flex-col ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           {/* Header */}
-          <div className="flex justify-between items-center p-4 border-b border-gray-200 bg-white">
+          <div className="flex justify-between items-center p-5 border-b border-gray-100 bg-white">
             <Logo showText={true} compact={true} />
             <button
               onClick={closeMobileMenu}
-              className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
               aria-label="Close menu"
             >
               <X className="h-6 w-6" />
             </button>
           </div>
-          
+
           {/* Menu items */}
-          <div className="overflow-y-auto h-[calc(100vh-73px)] bg-white py-2">
+          <div className="flex-1 overflow-y-auto py-4">
             {navigation.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="px-4 mb-1">
                 {item.dropdown ? (
-                  <div className="border-b border-gray-100">
+                  <div className="rounded-xl overflow-hidden bg-gray-50/50 border border-gray-100/50">
                     {/* Dropdown trigger */}
                     <button
                       onClick={() => toggleMobileDropdown(item.name)}
-                      className="w-full flex items-center justify-between px-6 py-3.5 text-gray-900 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors active:bg-blue-100"
+                      className={`w-full flex items-center justify-between px-4 py-4 text-left font-semibold transition-colors ${mobileDropdownOpen === item.name ? 'text-blue-600' : 'text-gray-900'
+                        }`}
                       aria-expanded={mobileDropdownOpen === item.name}
-                      aria-controls={`mobile-dropdown-${item.name}`}
                     >
                       <span>{item.name}</span>
-                      <ChevronRight 
-                        className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
-                          mobileDropdownOpen === item.name ? 'rotate-90 text-blue-600' : ''
-                        }`}
+                      <ChevronDown
+                        className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${mobileDropdownOpen === item.name ? 'rotate-180 text-blue-600' : ''
+                          }`}
                       />
                     </button>
-                    
+
                     {/* Dropdown items */}
                     <div
-                      id={`mobile-dropdown-${item.name}`}
-                      className={`overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 ${
-                        mobileDropdownOpen === item.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${mobileDropdownOpen === item.name ? 'max-h-96 opacity-100 mb-2' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-10 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors text-sm font-medium"
+                          className="block px-4 py-3 ml-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg transition-colors text-sm font-medium border-l-2 border-transparent hover:border-blue-300"
                           onClick={closeMobileMenu}
                         >
                           {subItem.name}
@@ -239,9 +240,10 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block px-6 py-3.5 text-gray-900 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors font-medium ${
-                      pathname === item.href ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-800' : ''
-                    }`}
+                    className={`block px-5 py-4 rounded-xl font-semibold transition-all ${pathname === item.href
+                      ? 'bg-blue-50 text-blue-600'
+                      : 'text-gray-900 hover:bg-gray-50 hover:text-blue-600'
+                      }`}
                     onClick={closeMobileMenu}
                   >
                     {item.name}
@@ -249,18 +251,21 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            
-            {/* Donate button */}
-            <div className="px-6 py-4 border-t border-gray-200 mt-4 bg-white">
-              <Link
-                href="/donate"
-                className="btn-primary w-full flex items-center justify-center gap-2"
-                onClick={closeMobileMenu}
-              >
-                <Heart className="w-4 h-4" />
-                Support Our Cause
-              </Link>
-            </div>
+          </div>
+
+          {/* Donate button footer */}
+          <div className="p-6 border-t border-gray-100 bg-gray-50">
+            <Link
+              href="/donate"
+              className="btn-primary w-full flex items-center justify-center gap-2 text-base py-3 shadow-lg shadow-blue-200"
+              onClick={closeMobileMenu}
+            >
+              <Heart className="w-5 h-5 fill-current" />
+              Support Our Cause
+            </Link>
+            <p className="text-center text-xs text-gray-400 mt-4">
+              Making a difference in the K&apos;Cho community
+            </p>
           </div>
         </div>
       </div>

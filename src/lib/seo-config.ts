@@ -9,34 +9,77 @@ export const seoConfig = {
       "Chin refugees Malaysia",
       "CEAM Malaysia",
       "K'Cho Ethnic Association",
-      
+      "Myanmar refugees Malaysia",
+      "Burma refugees Malaysia",
+
+      // Ethnic Groups & Dialects
+      "Mün Chin",
+      "Mün dialect",
+      "Dai Chin",
+      "Daai Chin",
+      "M'Kaang Chin",
+      "Daa Yindu",
+      "Uppu Chin",
+      "Ngagra Chin",
+      "Matu Chin",
+      "Zotung Chin",
+      "Mara Chin",
+      "Lautu Chin",
+      "Senthang Chin",
+
       // Regional Keywords
       "Mindat K'Cho community",
       "Kanpetlet Chin refugees",
       "Matupi K'Cho Malaysia",
       "Paletwa Chin community",
       "Yaw region refugees",
-      
+      "Southern Chin State",
+
       // Service Keywords
       "refugee education Malaysia",
       "refugee shelter services",
       "refugee community support",
       "refugee children education",
       "vulnerable refugee assistance",
-      
+      "Chin refugee community center",
+
       // Cultural Keywords
       "K'Cho cultural preservation",
       "Chin language programs",
       "Myanmar ethnic minorities",
       "Chin State heritage",
       "K'Cho traditional culture",
-      
+      "Chin festivals Malaysia",
+
       // Support Keywords
       "refugee volunteer opportunities",
       "donate refugee organization",
       "support Myanmar refugees",
       "refugee NGO Malaysia",
-      "humanitarian aid Malaysia"
+      "humanitarian aid Malaysia",
+      "community-based organization Malaysia",
+
+      // Related Organizations & Partners
+      "Alliance of Chin Refugees (ACR)",
+      "Chin Refugee Committee (CRC)",
+      "UNHCR Malaysia",
+      "Coalition of Burma Ethnics Malaysia (COBEM)",
+      "Zomi Association of Malaysia (ZAM)",
+      "Chin Student Organization (CSO)",
+      "Independent Chin Community (ICC)",
+      "Refuge for The Refugees (RFTR)",
+      "Myanmar Ethnic Women Refugee Organisation (MEWRO)",
+      "Myanmar Ethnics Organization (MEO)",
+      "Kachin Refugee Committee (KRC)",
+      "Mon Refugee Organization (MRO)",
+      "Shan Refugee Committee (SRC)",
+      "Arakan Refugee Relief Committee (ARRC)",
+      "Organization of Karenni Development (OKD)",
+      "Asylum Access Malaysia",
+      "Tenaganita",
+      "International Catholic Migration Commission (ICMC)",
+      "Refugee community organizations Malaysia",
+      "Chin community leaders Malaysia"
     ].join(", "),
     openGraph: {
       type: 'website',
@@ -55,7 +98,7 @@ export const seoConfig = {
       creator: '@ceamalaysia'
     }
   },
-  
+
   pages: {
     home: {
       title: "Empowering K'Cho Refugee Communities",
@@ -64,11 +107,14 @@ export const seoConfig = {
         "K'Cho refugee support",
         "Myanmar refugee assistance",
         "Chin community Malaysia",
+        "Mün Dai M'Kaang Daa Yindu communities",
+        "Mindat Kanpetlet Matupi Paletwa refugees",
         "refugee education programs",
         "humanitarian organization Malaysia",
         "K'Cho cultural preservation",
         "refugee children support",
-        "community-based organization"
+        "community-based organization",
+        "Chin refugee shelter"
       ].join(", "),
       openGraph: {
         title: "K'Cho Ethnic Association Malaysia - Empowering Communities",
@@ -80,7 +126,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     about: {
       title: "About K'Cho People & Our Mission",
       description: "Learn about the K'Cho ethnic group from Myanmar's Chin State, their journey as refugees, and CEAM's mission to support community resilience and cultural preservation in Malaysia.",
@@ -104,7 +150,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     initiatives: {
       title: "Community Programs & Initiatives",
       description: "Explore CEAM's comprehensive initiatives supporting K'Cho refugees including emergency aid, healthcare navigation, cultural programs, and integration support services.",
@@ -128,7 +174,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     learningCenters: {
       title: "Education for K'Cho Refugee Children",
       description: "CEAM Learning Centers provide quality education for 500+ refugee children, offering primary education, language programs, and cultural studies to bridge educational gaps.",
@@ -154,7 +200,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     shelter: {
       title: "Shelter & Care for Vulnerable Refugees",
       description: "CEAM Shelter Services provide safe housing, healthcare, and rehabilitation for vulnerable K'Cho refugees including elderly, disabled, and those with mental health needs.",
@@ -180,7 +226,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     contact: {
       title: "Contact CEAM - Get Involved",
       description: "Connect with K'Cho Ethnic Association Malaysia. Learn how to volunteer, donate, or partner with us to support refugee communities. Together, we can make a difference.",
@@ -204,7 +250,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     donate: {
       title: "Support K'Cho Refugees - Donate Today",
       description: "Your donation helps provide education, shelter, healthcare, and hope for K'Cho refugee families. Every contribution makes a real difference in building resilient communities.",
@@ -228,7 +274,7 @@ export const seoConfig = {
         }]
       }
     },
-    
+
     volunteer: {
       title: "Volunteer with K'Cho Refugees",
       description: "Make a meaningful impact by volunteering with CEAM. Opportunities in education, healthcare, administration, and community programs for K'Cho refugees in Malaysia.",
@@ -253,7 +299,7 @@ export const seoConfig = {
       }
     }
   },
-  
+
   structuredData: {
     organization: {
       "@context": "https://schema.org",

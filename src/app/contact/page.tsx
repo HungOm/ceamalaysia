@@ -14,7 +14,7 @@ export default function ContactPage() {
     message: '',
     type: 'general'
   })
-  
+
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
         message: '',
         type: 'general'
       })
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setStatus('idle')
@@ -62,7 +62,7 @@ export default function ContactPage() {
     } catch (error) {
       setStatus('error')
       setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again.')
-      
+
       // Reset error message after 5 seconds
       setTimeout(() => {
         setStatus('idle')
@@ -97,10 +97,15 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:contact@ceamalaysia.org" className="text-gray-600 hover:text-blue-600 transition-colors">
-                      contact@ceamalaysia.org
-                    </a>
+                    <div className="flex flex-col items-start gap-1">
+                      <a href="mailto:contact@ceamalaysia.org" className="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2 group">
+                        contact@ceamalaysia.org
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                          Preferred
+                        </span>
+                      </a>
+                      <p className="text-xs text-blue-600 italic">* Best channel for official inquiries</p>
+                    </div>
                   </div>
                 </div>
 
@@ -110,15 +115,23 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone / WhatsApp</h3>
-                    <a 
-                      href="https://wa.me/601168128634" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-600 transition-colors inline-flex items-center gap-1"
-                    >
-                      +60 11-6812 8634
-                      <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">WhatsApp</span>
-                    </a>
+                    <div className="flex flex-col items-start gap-1">
+                      <a
+                        href="https://wa.me/601168128634"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-blue-600 transition-colors inline-flex items-center gap-1 font-medium"
+                      >
+                        +60 11-6812 8634
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                          Preferred
+                        </span>
+                      </a>
+                      <p className="text-xs text-blue-600 italic">
+                        * Best channel for quick response
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -166,8 +179,13 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-                
+                <div>
+                  <h2 className="text-2xl font-bold mb-2">Send us a Message</h2>
+                  <p className="text-gray-500 text-sm mb-6">
+                    For the fastest response, we recommend contacting us via <a href="https://wa.me/601168128634" target="_blank" rel="noopener noreferrer" className="text-green-600 font-medium hover:underline">WhatsApp</a>. Alternatively, you can fill out the form below.
+                  </p>
+                </div>
+
                 {/* Status Messages */}
                 {status === 'success' && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
@@ -178,7 +196,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                 )}
-                
+
                 {status === 'error' && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
                     <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
@@ -207,7 +225,7 @@ export default function ContactPage() {
                         disabled={status === 'loading'}
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address *
@@ -242,7 +260,7 @@ export default function ContactPage() {
                         disabled={status === 'loading'}
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
                         Inquiry Type *
@@ -307,11 +325,10 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={status === 'loading'}
-                      className={`inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all ${
-                        status === 'loading'
-                          ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-blue-600 hover:bg-blue-700 text-white transform hover:-translate-y-0.5 active:translate-y-0'
-                      }`}
+                      className={`inline-flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all ${status === 'loading'
+                        ? 'bg-gray-400 cursor-not-allowed'
+                        : 'bg-blue-600 hover:bg-blue-700 text-white transform hover:-translate-y-0.5 active:translate-y-0'
+                        }`}
                     >
                       {status === 'loading' ? (
                         <>
@@ -333,22 +350,6 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      {/* Map Section */}
-      <Section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Find Us</h2>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-96">
-            {/* Replace with actual map implementation */}
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">Map integration placeholder</p>
-                <p className="text-sm text-gray-500 mt-2">Kuala Lumpur, Malaysia</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
     </>
   )
 }
