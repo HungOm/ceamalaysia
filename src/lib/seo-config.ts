@@ -11,6 +11,15 @@ export const seoConfig = {
       "K'Cho Ethnic Association",
       "Myanmar refugees Malaysia",
       "Burma refugees Malaysia",
+      "CEAM",
+      "CEA Malaysia",
+      "CEA K'Cho",
+      "CEA K'Cho Malaysia",
+      "CEA K'Cho Chin",
+      "CEA K'Cho Chin Malaysia",
+      "CEA K'Cho Chin Myanmar",
+      "CEA K'Cho Chin Myanmar Malaysia",
+      "CEA K'Cho Chin Myanmar Malaysia",
 
       // Ethnic Groups & Dialects
       "Mün Chin",
@@ -293,6 +302,76 @@ export const seoConfig = {
         description: "Join 50+ volunteers supporting K'Cho refugee communities through education and services",
         images: [{
           url: 'https://ceamalaysia.org/images/og-volunteer.jpg',
+          width: 1200,
+          height: 630
+        }]
+      }
+    },
+
+    events: {
+      title: "Upcoming Events & Community Gatherings",
+      description: "Join CEAM's cultural festivals, fundraising events, and community gatherings. Celebrating K'Cho heritage and supporting refugee resilience in Malaysia.",
+      keywords: [
+        "CEAM events",
+        "K'Cho cultural festivals",
+        "Kumthi 2026",
+        "Kumthi Ascension esports",
+        "refugee community events",
+        "Chin State celebrations",
+        "charity events Malaysia"
+      ].join(", "),
+      openGraph: {
+        title: "CEAM Events - Celebrating Culture & Community",
+        description: "Join us for Kumthi 2026, Esports Tournaments, and more.",
+        images: [{
+          url: 'https://ceamalaysia.org/images/og-default.jpg',
+          width: 1200,
+          height: 630
+        }]
+      }
+    },
+
+    kumthi2026: {
+      title: "Kumthi 2026 - A Cultural Renaissance",
+      description: "Experience the vibrant traditions of the K'Cho people at Kumthi 2026. Featuring traditional dances, fashion shows, live concerts, and community unity in Kuala Lumpur.",
+      keywords: [
+        "Kumthi 2026",
+        "K'Cho traditional festival",
+        "Chin cultural event",
+        "Mindat warrior dance",
+        "bamboo dance",
+        "K'Cho fashion show",
+        "cultural renaissance",
+        "CEAM festival"
+      ].join(", "),
+      openGraph: {
+        title: "Kumthi 2026 - Igniting the Spirit of K'Cho",
+        description: "A celebration of heritage, unity, and culture. Don't miss the biggest K'Cho event of the year.",
+        images: [{
+          url: 'https://ceamalaysia.org/images/og-default.jpg',
+          width: 1200,
+          height: 630
+        }]
+      }
+    },
+
+    kumthiAscension26: {
+      title: "Kumthi Ascension '26 - Esports Tournament",
+      description: "Register for Kumthi Ascension '26! compete in MLBB and PUBG Mobile tournaments with a total prize pool of RM 3,700+. Open to all Chin youths to showcase their skills.",
+      keywords: [
+        "Kumthi Ascension '26",
+        "esports tournament Malaysia",
+        "MLBB tournament",
+        "PUBG Mobile tournament",
+        "Chin youth gaming",
+        "mobile legends bang bang",
+        "prize pool tournament"
+      ].join(", "),
+      openGraph: {
+        title: "Kumthi Ascension '26 - Rise to Glory",
+        description: "Join the ultimate esports showdown. MLBB & PUBG Mobile. RM 3,700+ Prize Pool. Register now!",
+        images: [{
+          url: 'https://ceamalaysia.org/images/events/esport-posters/2.png',
           width: 1200,
           height: 630
         }]

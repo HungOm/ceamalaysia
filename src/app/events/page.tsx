@@ -3,9 +3,13 @@ import Section from '@/components/Section'
 import Link from 'next/link'
 import { Calendar, MapPin, ArrowRight, Trophy } from 'lucide-react'
 
+import { seoConfig } from '@/lib/seo-config'
+
 export const metadata = {
-    title: 'Events | K\'Cho Ethnic Association Malaysia',
-    description: 'Upcoming events, cultural celebrations, and community gatherings.',
+    title: seoConfig.pages.events.title,
+    description: seoConfig.pages.events.description,
+    keywords: seoConfig.pages.events.keywords,
+    openGraph: seoConfig.pages.events.openGraph,
 }
 
 export default function EventsPage() {
