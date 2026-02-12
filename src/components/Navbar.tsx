@@ -2,13 +2,14 @@
 import Logo from './Logo'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-import { Menu, X, ChevronDown, Heart, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Heart } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  // dropdownOpen value unused; setter kept for onMouseEnter/onMouseLeave (fix ESLint no-unused-vars)
+  const [, setDropdownOpen] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null)
   const pathname = usePathname()
   const mobileMenuRef = useRef<HTMLDivElement>(null)

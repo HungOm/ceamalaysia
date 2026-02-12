@@ -1,13 +1,12 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
-import Section from '@/components/Section'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
     Calendar, Clock, MapPin, Music, Zap, Users, Trophy, Star,
-    Sparkles, Mic, Monitor, Heart, ArrowRight, ArrowDown,
-    Play, Volume2, Camera, Gift, ChevronRight
+    Sparkles, Monitor, Heart, ArrowRight, ArrowDown,
+    Camera, ChevronRight
 } from 'lucide-react'
 
 /* ═══════════════════════════════════════════════════════
@@ -246,16 +245,7 @@ function MagneticCard({ children, className = '' }: { children: React.ReactNode;
     )
 }
 
-// Animated divider
-function WaveDivider({ flip = false, color = '#0d0806' }: { flip?: boolean; color?: string }) {
-    return (
-        <div className={`w-full overflow-hidden leading-[0] ${flip ? 'rotate-180' : ''}`}>
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 md:h-24">
-                <path d="M0,60 C200,120 400,0 600,60 C800,120 1000,0 1200,60 L1200,120 L0,120 Z" fill={color} />
-            </svg>
-        </div>
-    )
-}
+// WaveDivider removed: was defined but never used (fix ESLint no-unused-vars)
 
 /* ═══════════════════════════════════════════════════════
    DATA
@@ -716,7 +706,7 @@ export default function Kumthi2026Client() {
                         {/* Horizontal Phase Cards */}
                         <Reveal delay={0.2}>
                             <HorizontalScroll>
-                                {programPhases.map((p, pi) => (
+                                {programPhases.map((p) => (
                                     <div key={p.phase} className="snap-start flex-shrink-0 w-[320px] md:w-[360px] group">
                                         <div className="h-full rounded-2xl overflow-hidden border transition-all duration-500 hover:scale-[1.02]"
                                             style={{ borderColor: `${p.color}20`, background: `linear-gradient(135deg, ${p.color}05, ${p.color}10)` }}>

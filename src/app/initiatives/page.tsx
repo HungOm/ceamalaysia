@@ -2,23 +2,11 @@ import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { learningCenters, shelterServices, communityEfforts } from '@/lib/constants'
 import { seoConfig } from '@/lib/seo-config'
-import { Heart, Shield, Users, BookOpen, Home as HomeIcon, Megaphone, GraduationCap, HandHeart, ArrowRight } from 'lucide-react'
+import { Shield, BookOpen, GraduationCap, HandHeart, ArrowRight } from 'lucide-react'
 
 export const metadata = seoConfig.pages.initiatives;
 
-const effortIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Support Services': Shield,
-  'Cultural Heritage': BookOpen,
-  'Community Awareness': Megaphone,
-  'UNHCR Registration': Users,
-  'Integration Support': Heart,
-  'Safe Housing': HomeIcon,
-};
-
-const programIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Support Services': Shield,
-  'Cultural Programs': BookOpen,
-};
+// effortIcons/programIcons removed: were assigned but never used (fix ESLint no-unused-vars)
 
 export default function Initiatives() {
   const initiatives = [

@@ -5,9 +5,9 @@ import Section from '@/components/Section'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-    Calendar, Clock, MapPin, Trophy, Users, Monitor,
+    Calendar, Trophy, Users,
     ArrowRight, Sword, Crosshair, Crown, Flame, Zap,
-    Shield, Target, ChevronDown, Gamepad2
+    Shield, ChevronDown, Gamepad2
 } from 'lucide-react'
 
 /* ═══════════════════════════════════════════════════════
