@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { shelterServices } from '@/lib/constants'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 import { Home, Stethoscope, UtensilsCrossed, FileText, HeartHandshake, UserCheck, AlertTriangle, TrendingUp, Heart, ArrowRight, Heart as HeartIcon, Phone, MessageCircle, Shield, Clock, Users } from 'lucide-react'
 import Image from 'next/image'
 
-export const metadata = seoConfig.pages.shelter;
+export const metadata = getPageMetadata('shelter');
 
 const serviceIcons = [Home, Stethoscope, UtensilsCrossed, FileText, HeartHandshake];
 

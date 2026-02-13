@@ -2,10 +2,10 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { organizationInfo, missionVision, ethicalCommitments } from '@/lib/constants'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 
 // Updated metadata using seoConfig
-export const metadata = seoConfig.pages.about;
+export const metadata = getPageMetadata('about');
 
 export default function About() {
   return (

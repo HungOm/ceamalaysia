@@ -93,7 +93,7 @@ export const seoConfig = {
     openGraph: {
       type: 'website',
       locale: 'en_MY',
-      site_name: "K'Cho Ethnic Association Malaysia",
+      siteName: "K'Cho Ethnic Association Malaysia",
       images: [{
         url: 'https://ceamalaysia.org/images/cea-social-share.png',
         width: 1200,
@@ -411,4 +411,57 @@ export const seoConfig = {
       "nonprofitStatus": "Community-Based Organization"
     }
   }
+}
+
+const pagePaths: Record<string, string> = {
+  home: '/',
+  about: '/about',
+  initiatives: '/initiatives',
+  learningCenters: '/learning-centers',
+  shelter: '/shelter',
+  contact: '/contact',
+  donate: '/donate',
+  volunteer: '/volunteer',
+  events: '/events',
+  kumthi2026: '/events/kumthi-2026',
+  kumthiAscension26: '/events/kumthi-ascension-26',
+};
+
+// Build complete per-page metadata so social previews use each page's own content.
+export function getPageMetadata(pageKey: keyof typeof seoConfig.pages) {
+  const page = seoConfig.pages[pageKey];
+  const path = pagePaths[pageKey as string] ?? '/';
+  const canonicalUrl = `https://ceamalaysia.org${path}`;
+  const ogTitle = page.openGraph?.title ?? page.title;
+  const ogDescription = page.openGraph?.description ?? page.description;
+  const ogImages = page.openGraph?.images ?? seoConfig.default.openGraph.images;
+  const twitterImages = ogImages.map((image: { url: string } | string) =>
+    typeof image === 'string' ? image : image.url
+  );
+
+  return {
+    title: page.title,
+    description: page.description,
+    keywords: page.keywords,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_MY',
+      siteName: "K'Cho Ethnic Association Malaysia",
+      url: canonicalUrl,
+      title: ogTitle,
+      description: ogDescription,
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@ceamalaysia',
+      creator: '@ceamalaysia',
+      title: ogTitle,
+      description: ogDescription,
+      images: twitterImages,
+    },
+  };
 }

@@ -8,7 +8,35 @@ import { newsArticles } from '@/lib/news-data'
 export const metadata = {
   title: 'News & Updates | K\'Cho Ethnic Association Malaysia',
   description: 'Latest news, updates, and stories from the K\'Cho refugee community in Malaysia. Stay informed about our initiatives, events, and impact.',
-  keywords: 'K\'Cho news, refugee updates, community stories, CEAM news, Myanmar refugee news, Chin community updates'
+  keywords: 'K\'Cho news, refugee updates, community stories, CEAM news, Myanmar refugee news, Chin community updates',
+  alternates: {
+    canonical: 'https://ceamalaysia.org/news',
+  },
+  // Keep preview content aligned with this page's content.
+  openGraph: {
+    type: 'website',
+    locale: 'en_MY',
+    siteName: "K'Cho Ethnic Association Malaysia",
+    url: 'https://ceamalaysia.org/news',
+    title: 'News & Updates | K\'Cho Ethnic Association Malaysia',
+    description: 'Latest news, updates, and stories from the K\'Cho refugee community in Malaysia. Stay informed about our initiatives, events, and impact.',
+    images: [
+      {
+        url: 'https://ceamalaysia.org/images/cea-social-share.png',
+        width: 1200,
+        height: 630,
+        alt: 'CEAM News and Updates',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ceamalaysia',
+    creator: '@ceamalaysia',
+    title: 'News & Updates | K\'Cho Ethnic Association Malaysia',
+    description: 'Latest news, updates, and stories from the K\'Cho refugee community in Malaysia. Stay informed about our initiatives, events, and impact.',
+    images: ['https://ceamalaysia.org/images/cea-social-share.png'],
+  },
 };
 
 export default function NewsPage() {

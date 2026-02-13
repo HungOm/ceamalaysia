@@ -1,10 +1,10 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { learningCenters, shelterServices, communityEfforts } from '@/lib/constants'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 import { Shield, BookOpen, GraduationCap, HandHeart, ArrowRight } from 'lucide-react'
 
-export const metadata = seoConfig.pages.initiatives;
+export const metadata = getPageMetadata('initiatives');
 
 // effortIcons/programIcons removed: were assigned but never used (fix ESLint no-unused-vars)
 

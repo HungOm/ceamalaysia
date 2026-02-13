@@ -1,13 +1,10 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { EventsGrid } from '@/components/UpcomingEvents' // Client component — filters out past events by date
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 
 export const metadata = {
-    title: seoConfig.pages.events.title,
-    description: seoConfig.pages.events.description,
-    keywords: seoConfig.pages.events.keywords,
-    openGraph: seoConfig.pages.events.openGraph,
+    ...getPageMetadata('events'),
 }
 
 export default function EventsPage() {

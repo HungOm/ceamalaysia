@@ -1,11 +1,8 @@
 import { Metadata } from 'next'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
-    title: seoConfig.pages.contact.title,
-    description: seoConfig.pages.contact.description,
-    keywords: seoConfig.pages.contact.keywords,
-    openGraph: seoConfig.pages.contact.openGraph,
+    ...getPageMetadata('contact'),
 }
 
 export default function ContactLayout({

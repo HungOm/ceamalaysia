@@ -1,10 +1,10 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { learningCenters } from '@/lib/constants'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 import { BookOpen, Languages, Palette, Lightbulb, Gamepad2, AlertTriangle, TrendingUp, Heart, ArrowRight } from 'lucide-react'
 
-export const metadata = seoConfig.pages.learningCenters;
+export const metadata = getPageMetadata('learningCenters');
 
 const serviceIcons = [BookOpen, Languages, Palette, Lightbulb, Gamepad2];
 

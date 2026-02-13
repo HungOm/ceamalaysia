@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import { missionVision, communityEfforts, organizationInfo, statistics } from '@/lib/constants'
-import { seoConfig } from '@/lib/seo-config'
+import { getPageMetadata } from '@/lib/seo-config'
 import { HomeEventsSection } from '@/components/UpcomingEvents' // Client component — filters out past events by date
 import { Heart, Shield, Users, BookOpen, Home as HomeIcon, Megaphone } from 'lucide-react'
 
-export const metadata = seoConfig.pages.home;
+export const metadata = getPageMetadata('home');
 
 const effortIcons = {
   'Support Services': Shield,

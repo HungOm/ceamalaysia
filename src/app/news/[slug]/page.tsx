@@ -21,22 +21,34 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
   }
 
+  const articleUrl = `https://ceamalaysia.org/news/${article.slug}`;
+  const imageUrl = article.image.startsWith('http')
+    ? article.image
+    : `https://ceamalaysia.org${article.image}`;
+
   return {
     title: `${article.title} | CEAM News`,
     description: article.excerpt,
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
+      url: articleUrl,
       title: article.title,
       description: article.excerpt,
-      images: [article.image],
+      siteName: "K'Cho Ethnic Association Malaysia",
+      images: [imageUrl],
       type: 'article',
       publishedTime: article.date,
       authors: [article.author],
     },
     twitter: {
       card: 'summary_large_image',
+      site: '@ceamalaysia',
+      creator: '@ceamalaysia',
       title: article.title,
       description: article.excerpt,
-      images: [article.image],
+      images: [imageUrl],
     },
   }
 }
