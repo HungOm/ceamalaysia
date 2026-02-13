@@ -95,7 +95,7 @@ export const seoConfig = {
       locale: 'en_MY',
       site_name: "K'Cho Ethnic Association Malaysia",
       images: [{
-        url: 'https://ceamalaysia.org/images/og-default.jpg',
+        url: 'https://ceamalaysia.org/images/cea-social-share.png',
         width: 1200,
         height: 630,
         alt: "CEAM - Empowering K'Cho Refugee Communities"
@@ -129,7 +129,7 @@ export const seoConfig = {
         title: "K'Cho Ethnic Association Malaysia - Empowering Communities",
         description: "Supporting 8,000+ K'Cho refugees through education, shelter, and community programs",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-home.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -153,7 +153,7 @@ export const seoConfig = {
         title: "About K'Cho People - Heritage, History & Hope",
         description: "Discover the rich heritage of K'Cho people and CEAM's mission to support refugee communities",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-about.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -177,7 +177,7 @@ export const seoConfig = {
         title: "CEAM Initiatives - Comprehensive Refugee Support",
         description: "Discover our programs empowering K'Cho refugees through education, healthcare, and community services",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-initiatives.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -203,7 +203,7 @@ export const seoConfig = {
         title: "CEAM Learning Centers - Education for Refugee Children",
         description: "Quality education for 500+ K'Cho refugee children through community-based learning centers",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-education.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -229,7 +229,7 @@ export const seoConfig = {
         title: "CEAM Shelter Services - Safe Haven for Vulnerable Refugees",
         description: "Providing dignity and care for vulnerable K'Cho refugees through comprehensive shelter services",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-shelter.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -253,7 +253,7 @@ export const seoConfig = {
         title: "Contact CEAM - Join Our Mission",
         description: "Get involved in supporting K'Cho refugee communities through volunteering, donations, or partnerships",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-contact.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -277,7 +277,7 @@ export const seoConfig = {
         title: "Donate to CEAM - Transform Lives Today",
         description: "Support 8,000+ K'Cho refugees through education, shelter, and community programs",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-donate.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -301,7 +301,7 @@ export const seoConfig = {
         title: "Volunteer with CEAM - Make a Difference",
         description: "Join 50+ volunteers supporting K'Cho refugee communities through education and services",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-volunteer.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -324,7 +324,7 @@ export const seoConfig = {
         title: "CEAM Events - Celebrating Culture & Community",
         description: "Join us for Kumthi 2026, Esports Tournaments, and more.",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-default.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]
@@ -348,7 +348,7 @@ export const seoConfig = {
         title: "Kumthi 2026 - Igniting the Spirit of K'Cho",
         description: "A celebration of heritage, unity, and culture. Don't miss the biggest K'Cho event of the year.",
         images: [{
-          url: 'https://ceamalaysia.org/images/og-default.jpg',
+          url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
           height: 630
         }]

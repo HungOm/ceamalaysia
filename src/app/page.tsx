@@ -1,9 +1,9 @@
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
-import Link from 'next/link'
 import { missionVision, communityEfforts, organizationInfo, statistics } from '@/lib/constants'
 import { seoConfig } from '@/lib/seo-config'
-import { Heart, Shield, Users, BookOpen, Home as HomeIcon, Megaphone, ArrowRight, Calendar, Trophy } from 'lucide-react'
+import { HomeEventsSection } from '@/components/UpcomingEvents' // Client component — filters out past events by date
+import { Heart, Shield, Users, BookOpen, Home as HomeIcon, Megaphone } from 'lucide-react'
 
 export const metadata = seoConfig.pages.home;
 
@@ -25,86 +25,8 @@ export default function Home() {
         subtitleKCho={organizationInfo.taglineKCho}
         showCoverPhoto={true}
       />
-      {/* Upcoming Events Section */}
-      <Section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Upcoming Events</h2>
-              <div className="w-20 h-1.5 bg-blue-600 rounded-full" />
-            </div>
-            <Link href="/events" className="hidden md:flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-              View All Events <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Kumthi 2026 Card */}
-            <Link href="/events/kumthi-2026" className="group">
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
-                <div className="h-56 bg-gradient-to-r from-yellow-500 to-orange-500 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/10" />
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Cultural Festival</span>
-                    <h3 className="text-3xl font-black shadow-black drop-shadow-md">KUMTHI 2026</h3>
-                  </div>
-                </div>
-                <div className="p-8 flex-1 flex flex-col">
-                  <div className="space-y-4 mb-6">
-                    <div className="flex items-center gap-3 text-gray-600">
-                      <Calendar className="w-5 h-5 text-blue-500" />
-                      <span className="font-medium">April 1st, 2026 • 10:00 AM</span>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">
-                      Join us for the biggest cultural celebration of the year! Featuring traditional dances, modern music, and the grand finale of our esports championship.
-                    </p>
-                  </div>
-
-                  <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between text-blue-600 font-semibold group-hover:text-blue-700">
-                    <span>View Event Details</span>
-                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Esports Card */}
-            <Link href="/events/kumthi-ascension-26" className="group">
-              <div className="bg-[#0a101f] rounded-2xl shadow-md overflow-hidden border border-gray-800 hover:shadow-xl hover:border-blue-700 transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
-                <div className="h-56 bg-[#0f172a] relative overflow-hidden group-hover:bg-[#1e293b] transition-colors">
-                  <div className="absolute inset-0 bg-[url('/images/grid.png')] opacity-20" />
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <span className="bg-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Esports Tournament</span>
-                    <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">KUMTHI ASCENSION '26</h3>
-                  </div>
-                </div>
-                <div className="p-8 flex-1 flex flex-col">
-                  <div className="space-y-4 mb-6">
-                    <div className="flex items-center gap-3 text-gray-400">
-                      <Trophy className="w-5 h-5 text-yellow-500" />
-                      <span className="font-medium text-gray-300">Mobile Legends & PUBG Mobile</span>
-                    </div>
-                    <p className="text-gray-400 leading-relaxed">
-                      Witness the rise of new champions. MLBB Knockouts start March 8th. PUBG Mobile Showdown on March 15th.
-                    </p>
-                  </div>
-
-                  <div className="mt-auto pt-6 border-t border-gray-800 flex items-center justify-between text-blue-400 font-semibold group-hover:text-blue-300">
-                    <span>Tournament Info</span>
-                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="mt-8 text-center md:hidden">
-            <Link href="/events" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-              View All Events <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </Section>
+      {/* Upcoming Events Section — client component that auto-hides past events based on endDate */}
+      <HomeEventsSection />
 
       <Section className="py-16 md:py-20 bg-gradient-to-b from-white to-blue-50/30">
         <div className="max-w-5xl mx-auto">

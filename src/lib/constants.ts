@@ -26,23 +26,32 @@ export const organizationInfo = {
   type: 'Community-Based Organization',
   legalStatus: 'Humanitarian community organization serving K\'Cho refugees in Malaysia',
   estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
-  language: {
-    primary: 'K\'Cho (Mün dialect)',
-    secondary: 'Dai (Daai), Daa Yindu, and Ng\'Gah dialects',
-    details: 'The K\'Cho language family exhibits exceptionally high linguistic similarity (87–99%) across its dialects, fostering strong mutual intelligibility. The Mün dialect, originating from the group that established the K\'Cho writing system (often classified linguistically as Choic), serves as the foundational script for all other dialects. Geographically, Mün is primarily spoken in Mindat, while Daa Yindu is a major group in Kanpetlet, alongside Ng\'Gah (a subgroup of Mün). The Dai (Daai) dialect is dispersed across communities within the four southern townships of Chin State.',
-    note: 'Recognition and support for K\'Cho language in translation and interpretation remain essential'
-  },
-  kChoDetails: {
-    origin: 'The K\'Cho people come from the mountainous regions of southern Chin State, Myanmar—particularly from Mindat, Kanpetlet, Matupi, Paletwa, and surrounding areas.',
-    culturalIdentity: 'As one of the largest and linguistically dominant groups in Southern Chin State, the K\'Cho people are a distinct ethnic community known for their rich cultural traditions, close-knit social structure, and deep respect for faith and heritage. A unique and enduring aspect of K\'Cho heritage is the tradition of facial tattooing among women; although patterns vary distinctively across different tribes within the K\'Cho group, this custom continues to be recognized as a profound symbol of identity.',
-    history: 'For generations, the K\'Cho people lived in the highlands of Chin State, maintaining culturally rooted governance systems and community life.',
-    displacement: 'Due to conflict, persecution, and systemic hardship in Myanmar, many K\'Cho families have sought refuge in Malaysia in search of safety and stability.',
-    subGroups: 'The Mindat K\'Cho represent the primary origin group within our community, while we also encompass smaller K\'Cho groups from Kanpetlet, Matupi, Paletwa, and the Yaw regions.',
-    religion: 'Christianity is practiced by the majority of the community, with church groups serving as cultural and spiritual support networks.',
-    livelihood: 'Despite Malaysia’s restrictions on formal employment for refugees, the community shows remarkable resilience through informal work, small-scale trades, and mutual support.',
-    challenges: 'The K\'Cho community—historically recognized as one of the five original founding groups of Chin State (alongside Zomi, Lai, Khumi, and Matu) and constituting one of the largest demographic cohorts within the Chin refugee population—faces persistent structural marginalization in both Myanmar and Malaysia. This systemic exclusion is most visible in the lack of proportional representation within the Alliance of Chin Refugees (ACR) and Chin Refugee Committee (CRC), and the complete absence of representation within the Independent Chin Communities (ICC). Consequently, the community encounters significant barriers to equitable protection, resource allocation, and advocacy opportunities.',
-    culturalPreservation: 'Through language programs, cultural gatherings, and intergenerational storytelling, our community actively preserves K\'Cho identity while navigating life in Malaysia.'
-  },
+    language: {
+      primary: "K'Cho (Mün dialect)",
+      secondary: "Dai (Daai), Daa Yindu, and Ng'Gah dialects",
+      details: "The K'Cho language family belongs to the Southern Chin branch of the Tibeto-Burman group. It exhibits substantial linguistic similarity (approximately 80–90%+) across its dialects, fostering a high degree of mutual intelligibility. The Mün dialect is prominent and widely spoken in Mindat, while Daa Yindu is a major group in Kanpetlet, alongside Ng'Gah. The Dai (Daai) dialect is dispersed across communities within the four southern townships of Chin State.",
+      note: "Recognition and support for K'Cho language in translation and interpretation remain essential."
+    },
+  
+    kChoDetails: {
+      origin: "The K'Cho people originate from the mountainous regions of southern Chin State, Myanmar—particularly from Mindat, Kanpetlet, Matupi, Paletwa, and surrounding areas.",
+      
+      culturalIdentity: "The K'Cho are a distinct ethnic community known for rich cultural traditions, a close-knit social structure, and deep respect for faith and heritage. A unique and enduring aspect of K'Cho heritage is the historic tradition of facial tattooing among women. Although this practice is rare today, it continues to be recognized as a profound symbol of identity and history.",
+      
+      history: "For generations, the K'Cho people lived in the highlands of Chin State, maintaining culturally rooted governance systems and community life before conflict necessitated displacement.",
+      
+      displacement: "Due to conflict, persecution, and systemic hardship in Myanmar, many K'Cho families have sought refuge in Malaysia in search of safety and stability.",
+      
+      subGroups: "The Mindat K'Cho represent the primary origin group within our community, while we also encompass K'Cho groups from Kanpetlet, Matupi, Paletwa, and the Yaw regions.",
+      
+      religion: "Christianity is practiced by the majority of the community, with church groups serving as vital cultural and spiritual support networks.",
+      
+      livelihood: "Despite Malaysia’s restrictions on formal employment for refugees, the community shows remarkable resilience through informal work, small-scale trades, and mutual support.",
+      
+      challenges: "The K'Cho community constitutes one of the largest demographic cohorts within the Chin refugee population, yet faces persistent structural marginalization. This systemic exclusion is visible in the lack of proportional representation within the Alliance of Chin Refugees (ACR) and Chin Refugee Committee (CRC), and the absence of representation within the Independent Chin Communities (ICC). Consequently, the community encounters significant barriers to equitable protection, resource allocation, and advocacy opportunities.",
+      
+      culturalPreservation: "Through language programs, cultural gatherings, and intergenerational storytelling, our community actively preserves K'Cho identity while navigating life in Malaysia."
+    },
   citations: [
     {
       author: "Mang, Kee Shein",
@@ -309,6 +318,58 @@ export const partners = [
   { name: 'Educational Institutions', role: 'Learning resources and academic support' },
   { name: 'Faith Communities', role: 'Spiritual care and social support' },
   { name: 'International Donors', role: 'Financial and humanitarian assistance' }
+];
+
+
+// Event data with dates — used for client-side date filtering so past events are no longer displayed
+export interface EventData {
+  id: string;
+  title: string;
+  badge: string;
+  date: string; // ISO date string for event start
+  endDate: string; // ISO date string — event card is hidden after this date passes
+  dateDisplay: string; // Human-readable date for display
+  location?: string;
+  secondaryInfo?: string; // e.g., game titles for esports events
+  description: string; // Description shown on events listing page
+  descriptionHome: string; // Description shown on home page
+  href: string;
+  type: 'cultural' | 'esports';
+  ctaText: string; // CTA text on events listing page
+  ctaTextHome: string; // CTA text on home page
+}
+
+export const eventsData: EventData[] = [
+  {
+    id: 'kumthi-2026',
+    title: 'KUMTHI 2026',
+    badge: 'Cultural Festival',
+    date: '2026-04-01T10:00:00+08:00',
+    endDate: '2026-04-02T00:00:00+08:00', // Hidden after April 1st ends (Malaysia time)
+    dateDisplay: 'April 1st, 2026 • 10:00 AM',
+    location: 'Main Hall, Kuala Lumpur',
+    description: 'Join us for the biggest cultural celebration of the year! Featuring traditional dances, modern music, esports awards, and more.',
+    descriptionHome: 'Join us for the biggest cultural celebration of the year! Featuring traditional dances, modern music, and the grand finale of our esports championship.',
+    href: '/events/kumthi-2026',
+    type: 'cultural',
+    ctaText: 'View Event Details',
+    ctaTextHome: 'View Event Details',
+  },
+  {
+    id: 'kumthi-ascension-26',
+    title: "KUMTHI ASCENSION '26",
+    badge: 'Esports Tournament',
+    date: '2026-03-08T00:00:00+08:00',
+    endDate: '2026-04-02T00:00:00+08:00', // Ends after Kumthi 2026 (finals are at the main event)
+    dateDisplay: 'Starts March 8th, 2026',
+    secondaryInfo: 'Mobile Legends & PUBG Mobile',
+    description: "The biggest esports event for K'Cho youth. 32 PUBG Teams. MLBB Knockouts. One Stage for Glory.",
+    descriptionHome: 'Witness the rise of new champions. MLBB Knockouts start March 8th. PUBG Mobile Showdown on March 15th.',
+    href: '/events/kumthi-ascension-26',
+    type: 'esports',
+    ctaText: 'Tournament Details',
+    ctaTextHome: 'Tournament Info',
+  },
 ];
 
 
