@@ -17,6 +17,12 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
+// Optional: set NEXT_PUBLIC_FACEBOOK_APP_ID (or NEXT_PUBLIC_FB_APP_ID) to emit fb:app_id for social debuggers.
+const facebookAppId =
+  process.env.NEXT_PUBLIC_FACEBOOK_APP_ID?.trim() ||
+  process.env.NEXT_PUBLIC_FB_APP_ID?.trim() ||
+  ''
+
 export const metadata: Metadata = {
   title: seoConfig.default.title,
   description: seoConfig.default.description,
@@ -91,6 +97,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        {facebookAppId ? <meta property="fb:app_id" content={facebookAppId} /> : null}
+      </head>
       <body className={`${inter.className} min-h-screen`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />

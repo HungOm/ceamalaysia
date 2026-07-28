@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Un-anonymized source photos of shelter residents. Never commit or publish these:
+# the published copies under public/images/shelter/ are face-blurred.
+/private-originals
