@@ -90,9 +90,12 @@ export default function ShelterServices() {
       <Section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Eligibility</h2>
+            {/* SECURITY: heading and intro changed from "Eligibility" + a public list of
+                resident vulnerability categories to a referral process description. The old
+                framing told hostile actors exactly which at-risk groups are housed here. */}
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Referrals &amp; Admission</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mb-6" />
-            <p className="text-gray-600 max-w-2xl mx-auto">Our shelter services are available to K&apos;Cho community members and other refugees who meet the following criteria:</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Our shelter supports K&apos;Cho community members and other refugees facing urgent protection needs. Placements are made through a confidential referral process:</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             {shelterServices.eligibility.map((criteria, index) => (

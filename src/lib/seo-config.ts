@@ -68,27 +68,22 @@ export const seoConfig = {
       "humanitarian aid Malaysia",
       "community-based organization Malaysia",
 
-      // Related Organizations & Partners
-      "Alliance of Chin Refugees (ACR)",
-      "Chin Refugee Committee (CRC)",
-      "UNHCR Malaysia",
-      "Coalition of Burma Ethnics Malaysia (COBEM)",
-      "Zomi Association of Malaysia (ZAM)",
-      "Chin Student Organization (CSO)",
-      "Independent Chin Community (ICC)",
-      "Refuge for The Refugees (RFTR)",
-      "Myanmar Ethnic Women Refugee Organisation (MEWRO)",
-      "Myanmar Ethnics Organization (MEO)",
-      "Kachin Refugee Committee (KRC)",
-      "Mon Refugee Organization (MRO)",
-      "Shan Refugee Committee (SRC)",
-      "Arakan Refugee Relief Committee (ARRC)",
-      "Organization of Karenni Development (OKD)",
-      "Asylum Access Malaysia",
-      "Tenaganita",
-      "International Catholic Migration Commission (ICMC)",
-      "Refugee community organizations Malaysia",
-      "Chin community leaders Malaysia"
+      // SECURITY: the list of ~20 named refugee organisations was removed from here.
+      // These keywords were emitted in a meta tag on EVERY page (including 404), which
+      // effectively published a map of the Malaysian refugee-NGO network on CEAM's own
+      // domain — a convenient target list for anyone campaigning against refugee
+      // organisations, and it associated those groups with CEAM without their consent.
+      // Naming peer organisations is not needed for CEAM's own search visibility.
+      // Previous values: "Alliance of Chin Refugees (ACR)", "Chin Refugee Committee (CRC)",
+      // "UNHCR Malaysia", "Coalition of Burma Ethnics Malaysia (COBEM)", "Zomi Association of
+      // Malaysia (ZAM)", "Chin Student Organization (CSO)", "Independent Chin Community (ICC)",
+      // "Refuge for The Refugees (RFTR)", "Myanmar Ethnic Women Refugee Organisation (MEWRO)",
+      // "Myanmar Ethnics Organization (MEO)", "Kachin Refugee Committee (KRC)", "Mon Refugee
+      // Organization (MRO)", "Shan Refugee Committee (SRC)", "Arakan Refugee Relief Committee
+      // (ARRC)", "Organization of Karenni Development (OKD)", "Asylum Access Malaysia",
+      // "Tenaganita", "International Catholic Migration Commission (ICMC)",
+      // "Refugee community organizations Malaysia", "Chin community leaders Malaysia"
+      "refugee community organizations Malaysia"
     ].join(", "),
     openGraph: {
       type: 'website',
@@ -127,7 +122,12 @@ export const seoConfig = {
       ].join(", "),
       openGraph: {
         title: "K'Cho Ethnic Association Malaysia - Empowering Communities",
-        description: "Supporting 8,000+ K'Cho refugees through education, shelter, and community programs",
+        // SECURITY: refugee headcount removed from the social-share description. This text is
+        // what appears on every Facebook/X/WhatsApp preview of the site, so it was the most
+        // widely-circulated copy CEAM publishes — and aggregate population figures are the
+        // standard hook for "flooding" framing. Previous value:
+        // "Supporting 8,000+ K'Cho refugees through education, shelter, and community programs"
+        description: "Supporting the K'Cho community in Malaysia through education, shelter, and community programs",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
@@ -186,7 +186,12 @@ export const seoConfig = {
 
     learningCenters: {
       title: "Education for K'Cho Refugee Children",
-      description: "CEAM Learning Centers provide quality education for 500+ refugee children, offering primary education, language programs, and cultural studies to bridge educational gaps.",
+      // SECURITY: "500+ refugee children" removed. It contradicted the "300+" figure shown on
+      // the home page (an easy credibility target), and publishing the size of an
+      // uncertified school roll invites scrutiny of the centres themselves.
+      // Previous value: "CEAM Learning Centers provide quality education for 500+ refugee children,
+      // offering primary education, language programs, and cultural studies to bridge educational gaps."
+      description: "CEAM Learning Centers offer primary education, language programs, and cultural studies for K'Cho refugee children, helping to bridge educational gaps.",
       keywords: [
         "refugee education Malaysia",
         "K'Cho learning centers",
@@ -201,7 +206,9 @@ export const seoConfig = {
       ].join(", "),
       openGraph: {
         title: "CEAM Learning Centers - Education for Refugee Children",
-        description: "Quality education for 500+ K'Cho refugee children through community-based learning centers",
+        // SECURITY: headcount removed, see note on the description above.
+        // Previous value: "Quality education for 500+ K'Cho refugee children through community-based learning centers"
+        description: "Quality education for K'Cho refugee children through community-based learning centers",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,
@@ -275,7 +282,9 @@ export const seoConfig = {
       ].join(", "),
       openGraph: {
         title: "Donate to CEAM - Transform Lives Today",
-        description: "Support 8,000+ K'Cho refugees through education, shelter, and community programs",
+        // SECURITY: refugee headcount removed (see note on the home page description above).
+        // Previous value: "Support 8,000+ K'Cho refugees through education, shelter, and community programs"
+        description: "Support K'Cho refugee families through education, shelter, and community programs",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',
           width: 1200,

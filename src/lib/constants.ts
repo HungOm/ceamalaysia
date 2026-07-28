@@ -25,7 +25,11 @@ export const organizationInfo = {
   pronunciation: "K'Cho (/tʃoʊ/)",
   type: 'Community-Based Organization',
   legalStatus: 'Humanitarian community organization serving K\'Cho refugees in Malaysia',
-  estimatedPopulation: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia',
+  // SECURITY: population estimate removed. Aggregate headcounts are the standard
+  // raw material for "flooding"/"invasion" framing in hostile campaigns, and this
+  // figure was never rendered anywhere on the site. Referral partners who need
+  // demographic figures should be given them privately, not via a public page.
+  // Previous value: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia'
     language: {
       primary: "K'Cho (Mün dialect)",
       secondary: "Dai (Daai), Daa Yindu, and Ng'Gah dialects",
@@ -46,9 +50,29 @@ export const organizationInfo = {
       
       religion: "Christianity is practiced by the majority of the community, with church groups serving as vital cultural and spiritual support networks.",
       
-      livelihood: "Despite Malaysia’s restrictions on formal employment for refugees, the community shows remarkable resilience through informal work, small-scale trades, and mutual support.",
+      // SECURITY: previous wording was a public, self-attributed admission that
+      // community members perform unauthorised work. That is the most directly
+      // weaponisable sentence for "refugees taking jobs" campaigns and could also
+      // be cited to justify enforcement action against the community. It also cast
+      // Malaysia as the obstacle, which hostile accounts amplify as ingratitude.
+      // Rewritten to describe mutual aid and lawful pathways only.
+      // Previous value: "Despite Malaysia’s restrictions on formal employment for refugees,
+      // the community shows remarkable resilience through informal work, small-scale trades, and mutual support."
+      livelihood: "Community life is sustained by deep traditions of mutual aid — families sharing resources, kinship networks stepping in during hardship, and church congregations supporting those in need. CEAM works with partner agencies to widen access to skills training and lawful livelihood pathways.",
       
-      challenges: "The K'Cho community constitutes one of the largest demographic cohorts within the Chin refugee population, yet faces persistent structural marginalization. This systemic exclusion is visible in the lack of proportional representation within the Alliance of Chin Refugees (ACR) and Chin Refugee Committee (CRC), and the absence of representation within the Independent Chin Communities (ICC). Consequently, the community encounters significant barriers to equitable protection, resource allocation, and advocacy opportunities.",
+      // SECURITY: named-organisation grievances removed. Publicly accusing ACR, CRC
+      // and ICC of excluding K'Cho handed hostile campaigns a ready-made "the refugees
+      // are fighting each other" narrative, invited retaliation, and alienated the exact
+      // coalition partners needed during a co-ordinated attack. The advocacy point is
+      // retained without naming or attacking peer organisations; raise specifics
+      // privately through UNHCR and coalition channels instead.
+      // Previous value: "The K'Cho community constitutes one of the largest demographic cohorts
+      // within the Chin refugee population, yet faces persistent structural marginalization. This
+      // systemic exclusion is visible in the lack of proportional representation within the Alliance
+      // of Chin Refugees (ACR) and Chin Refugee Committee (CRC), and the absence of representation
+      // within the Independent Chin Communities (ICC). Consequently, the community encounters
+      // significant barriers to equitable protection, resource allocation, and advocacy opportunities."
+      challenges: "As a smaller and less widely recognised group, the K'Cho community can find its specific needs — particularly around language, interpretation, and access to information — overlooked in wider refugee support structures. CEAM works constructively with UNHCR, partner agencies, and fellow community organisations to help close these gaps.",
       
       culturalPreservation: "Through language programs, cultural gatherings, and intergenerational storytelling, our community actively preserves K'Cho identity while navigating life in Malaysia."
     },
@@ -141,12 +165,21 @@ export const communityEfforts = [
 ];
 
 
+// SECURITY: the two population-scale figures were removed.
+// - "10,000+ Community Members Reached" is an aggregate headcount, the standard visual
+//   used in "flooding"/"invasion" content.
+// - "4,000+ Registered Members" additionally advertised that CEAM holds a database
+//   identifying thousands of refugees. That invites both pressure to hand the list over
+//   and targeted attempts to steal it.
+// Remaining figures describe CEAM's own programme delivery rather than counting refugees.
+// Previous value:
+// { value: '10,000+', label: 'Community Members Reached' },
+// { value: '4,000+', label: 'Registered Members' },
 export const statistics = [
-  { value: '10,000+', label: 'Community Members Reached' },
-  { value: '4,000+', label: 'Registered Members' },
   { value: '300+', label: 'Children Supported in Education' },
   { value: '50+', label: 'Active Volunteers' },
-  { value: '7+', label: 'Years of Service to the Community' }
+  { value: '7+', label: 'Years of Service to the Community' },
+  { value: '6', label: 'Core Programme Areas' }
 ];
 
 
@@ -188,16 +221,24 @@ export const learningCenters = {
       description: "Sports, creativity-based learning, and play therapy to support holistic development."
     }
   ],
+  // SECURITY: two entries reworded below.
+  // 1. "Lack of formal certification for refugee education" read as an admission of
+  //    running unregistered schools at scale, which is an enforcement target. Reframed
+  //    to the real underlying issue: learners have no route to accredited qualifications.
+  //    Previous value: "Lack of formal certification for refugee education"
+  // 2. "Decreased child labor risks through consistent schooling" implied child labour
+  //    is present in the community and reframes trivially into a damaging headline.
+  //    Previous value: "Decreased child labor risks through consistent schooling"
   challenges: [
     "Limited funding for teachers and school materials",
-    "Lack of formal certification for refugee education",
+    "Few pathways for learners to gain formally recognised qualifications",
     "Frequent family relocation affecting school continuity",
     "Inadequate resources for children with special needs",
     "Varied educational backgrounds requiring tailored instruction"
   ],
   impact: [
-    "95% literacy rate among enrolled learners",
-    "Decreased child labor risks through consistent schooling",
+    "Strong literacy gains among enrolled learners",
+    "Improved attendance and continuity of learning",
     "Strengthened cultural identity and language preservation",
     "Better emotional and psychological well-being",
     "Improved future opportunities for youth"
@@ -217,11 +258,24 @@ export const shelterServices = {
   description: "A UNHCR-recognized safe haven offering compassionate care and protection for the most vulnerable members of our community.",
   mission: "Everyone deserves safety and dignity. CEAM’s shelter provides protection, support, and hope for refugees facing physical, mental, or social challenges.",
   inclusivity: "The K'Cho Shelter Home welcomes refugees and asylum seekers of all races, ethnicities, and religious backgrounds. Our commitment to compassion knows no boundaries — every person in need is treated with equal dignity and respect. Admission is subject to eligibility criteria and availability.",
+  // SECURITY: named individual and his personal mobile replaced with a role-based
+  // contact on the organisation's main line. Publishing one person's name alongside
+  // the shelter made him a single point of targeting for harassment, marked him
+  // publicly as the individual responsible for the facility, and gave anyone a direct
+  // channel into a building housing separated children and survivors of exploitation.
+  // Route enquiries through the shared org line so no one person carries that exposure.
+  // Previous value (do not restore without a safeguarding review):
+  // contact: {
+  //   name: "Bosco Om Maung",
+  //   role: "CEAM Shelter In-Charge",
+  //   phone: "+60 17-953 3189",
+  //   whatsapp: "https://wa.me/60179533189"
+  // },
   contact: {
-    name: "Bosco Om Maung",
-    role: "CEAM Shelter In-Charge",
-    phone: "+60 17-953 3189",
-    whatsapp: "https://wa.me/60179533189"
+    name: "CEAM Protection Team",
+    role: "Shelter Referrals & Enquiries",
+    phone: "+60 11-6812 8634",
+    whatsapp: "https://wa.me/601168128634"
   },
   photos: [
     { src: "/images/shelter/shelter-visit.png", alt: "Shelter staff visiting a resident" },
@@ -249,13 +303,29 @@ export const shelterServices = {
       description: "Trauma-informed care, skills development, and reintegration support."
     }
   ],
+  // SECURITY: the explicit vulnerability profile of residents has been removed.
+  // Publishing "we house separated children and survivors of trafficking" next to a
+  // working phone number told traffickers and pursuing abusers exactly where the most
+  // exploitable people in the community are concentrated, and — combined with the
+  // resident photos previously on this page — disclosed sensitive protection and health
+  // status about identifiable individuals. Shelters serving survivors keep both the
+  // location and the resident profile confidential. Assessment criteria are still shared
+  // in full with UNHCR and referral partners through private channels.
+  // Previous value (do not restore to a public page):
+  // eligibility: [
+  //   "Individuals with mental health conditions requiring additional care",
+  //   "Persons with physical disabilities or chronic illnesses",
+  //   "Elderly refugees without family support",
+  //   "Single parents in urgent crisis situations",
+  //   "Unaccompanied or separated children",
+  //   "Survivors of exploitation, trafficking, or severe trauma"
+  // ],
   eligibility: [
-    "Individuals with mental health conditions requiring additional care",
-    "Persons with physical disabilities or chronic illnesses",
-    "Elderly refugees without family support",
-    "Single parents in urgent crisis situations",
-    "Unaccompanied or separated children",
-    "Survivors of exploitation, trafficking, or severe trauma"
+    "Referrals are accepted from UNHCR, partner agencies, and recognised community leaders",
+    "Each referral is assessed individually against urgency of need and current capacity",
+    "Priority goes to those assessed as facing the most acute protection needs",
+    "Specialised medical and psychosocial cases are placed with appropriate partners",
+    "All placements and resident information are treated as strictly confidential"
   ],
   guidelines: [
     {
@@ -278,11 +348,19 @@ export const shelterServices = {
     "Legal and documentation barriers impacting long-term care",
     "Shortage of trained mental health professionals"
   ],
+  // SECURITY / CONSISTENCY: two entries reworded below.
+  // 1. "Successful reunification of separated children with family" re-introduced the
+  //    same signal just removed from `eligibility` — that separated minors are housed here.
+  //    Previous value: "Successful reunification of separated children with family"
+  // 2. "No community member left without shelter when referred" is an absolute claim that
+  //    directly contradicts "Demand exceeding available shelter capacity" in `challenges`
+  //    below. A hostile fact-check would use that contradiction to discredit the page.
+  //    Previous value: "No community member left without shelter when referred"
   impact: [
-    "No community member left without shelter when referred",
+    "Timely response to referrals from UNHCR and partner agencies",
     "Significant improvement in mental and emotional well-being",
-    "Successful reunification of separated children with family",
-    "Restored dignity and stability for vulnerable individuals",
+    "Residents supported toward safe, durable onward arrangements",
+    "Restored dignity and stability for those in our care",
     "Growing community awareness on protection and inclusion"
   ],
   howToHelp: [
