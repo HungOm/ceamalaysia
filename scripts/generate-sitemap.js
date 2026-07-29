@@ -4,7 +4,8 @@ const path = require('path');
 const baseUrl = 'https://ceamalaysia.org';
 
 // Navigation structure (mirrored from constants.ts)
-// Note: News is commented out in navigation but included in sitemap
+// Note: the /news section was removed (see src/lib/news-data.ts for why), so it is no
+// longer listed here or submitted to search engines.
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -16,19 +17,20 @@ const navigation = [
     ]
   },
   { name: 'Initiatives', href: '/initiatives' },
-  // { name: 'News', href: '/news' }, // Commented out but still in sitemap
   { name: 'Contact', href: '/contact' },
 ];
 
-// News articles slugs
-const newsArticles = [
-  'new-learning-center-opens-2024',
-  'community-health-screening-2024',
-  'cultural-festival-preserves-heritage',
-  'youth-leadership-program-graduates',
-  'emergency-aid-flood-victims',
-  'womens-skills-training-success'
-];
+// SECURITY / CREDIBILITY: the six placeholder article slugs previously listed here were
+// actively submitting fabricated pages to Google. They are removed along with the /news
+// routes. Previous value:
+// const newsArticles = [
+//   'new-learning-center-opens-2024',
+//   'community-health-screening-2024',
+//   'cultural-festival-preserves-heritage',
+//   'youth-leadership-program-graduates',
+//   'emergency-aid-flood-victims',
+//   'womens-skills-training-success'
+// ];
 
 // Function to get priority based on URL depth
 const getPriority = (url) => {
@@ -69,23 +71,12 @@ navigation.forEach(nav => {
   }
 });
 
-// Add news page
-pages.push({
-  url: '/news',
-  lastMod: new Date().toISOString(),
-  changeFreq: 'weekly',
-  priority: '0.9'
-});
-
-// Add news articles
-newsArticles.forEach(slug => {
-  pages.push({
-    url: `/news/${slug}`,
-    lastMod: new Date().toISOString(),
-    changeFreq: 'monthly',
-    priority: '0.7'
-  });
-});
+// The /news listing page and its article URLs are no longer emitted (see note above).
+// Previous value:
+// pages.push({ url: '/news', lastMod: new Date().toISOString(), changeFreq: 'weekly', priority: '0.9' });
+// newsArticles.forEach(slug => {
+//   pages.push({ url: `/news/${slug}`, lastMod: new Date().toISOString(), changeFreq: 'monthly', priority: '0.7' });
+// });
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

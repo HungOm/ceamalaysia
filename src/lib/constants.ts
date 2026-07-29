@@ -451,23 +451,23 @@ export const eventsData: EventData[] = [
 ];
 
 
-export const testimonials = [
-  {
-    name: "Sarah M.",
-    role: "Parent",
-    content: "CEAM’s learning center has been a blessing for my children. They are learning, growing, and staying connected to their K'Cho identity.",
-    rating: 5
-  },
-  {
-    name: "David L.",
-    role: "Community Elder",
-    content: "During my hardest moments, the shelter gave me not only a place to stay, but a community that cared for me with dignity.",
-    rating: 5
-  },
-  {
-    name: "Mary T.",
-    role: "Youth Leader",
-    content: "Through CEAM’s programs, our youth are discovering their strengths and preparing for opportunities beyond hardship.",
-    rating: 5
-  }
-];
+// SECURITY / CREDIBILITY: emptied for the same reason as the placeholder news articles.
+// These were invented beneficiaries with invented quotes — including one attributed to a
+// shelter resident describing their own stay. Publishing fabricated beneficiary testimony
+// is the same credibility risk as fabricated news, and a real version would additionally
+// need informed consent before any resident's words or circumstances go on a public page.
+// Nothing rendered these, so removing them changes no page today; they are emptied so they
+// cannot be wired up later by mistake.
+//
+// Before adding real testimonials: get written consent, let the person review the exact
+// wording, and do not identify shelter residents or link anyone to a protection service.
+// Previous value:
+// { name: "Sarah M.", role: "Parent", content: "CEAM's learning center has been a blessing for my children...", rating: 5 },
+// { name: "David L.", role: "Community Elder", content: "During my hardest moments, the shelter gave me not only a place to stay...", rating: 5 },
+// { name: "Mary T.", role: "Youth Leader", content: "Through CEAM's programs, our youth are discovering their strengths...", rating: 5 }
+export const testimonials: Array<{
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+}> = [];
