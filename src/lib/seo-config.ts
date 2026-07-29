@@ -186,11 +186,10 @@ export const seoConfig = {
 
     learningCenters: {
       title: "Education for K'Cho Refugee Children",
-      // SECURITY: "500+ refugee children" removed. It contradicted the "300+" figure shown on
-      // the home page (an easy credibility target), and publishing the size of an
-      // uncertified school roll invites scrutiny of the centres themselves.
-      // Previous value: "CEAM Learning Centers provide quality education for 500+ refugee children,
-      // offering primary education, language programs, and cultural studies to bridge educational gaps."
+      // SECURITY: the enrolment headcount was removed. It contradicted the smaller figure shown
+      // on the home page (an easy credibility target), and publishing the size of an uncertified
+      // school roll invites scrutiny of the centres themselves. The old string is in git history
+      // rather than quoted here, since this repository is public.
       description: "CEAM Learning Centers offer primary education, language programs, and cultural studies for K'Cho refugee children, helping to bridge educational gaps.",
       keywords: [
         "refugee education Malaysia",
@@ -207,7 +206,7 @@ export const seoConfig = {
       openGraph: {
         title: "CEAM Learning Centers - Education for Refugee Children",
         // SECURITY: headcount removed, see note on the description above.
-        // Previous value: "Quality education for 500+ K'Cho refugee children through community-based learning centers"
+        // Old string kept in git history only, not quoted here.
         description: "Quality education for K'Cho refugee children through community-based learning centers",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',

@@ -167,15 +167,14 @@ export const communityEfforts = [
 
 
 // SECURITY: the two population-scale figures were removed.
-// - "10,000+ Community Members Reached" is an aggregate headcount, the standard visual
-//   used in "flooding"/"invasion" content.
-// - "4,000+ Registered Members" additionally advertised that CEAM holds a database
+// - A "Community Members Reached" total is an aggregate headcount, the standard visual used
+//   in "flooding"/"invasion" content.
+// - A "Registered Members" total additionally advertised that CEAM holds a database
 //   identifying thousands of refugees. That invites both pressure to hand the list over
 //   and targeted attempts to steal it.
 // Remaining figures describe CEAM's own programme delivery rather than counting refugees.
-// Previous value:
-// { value: '10,000+', label: 'Community Members Reached' },
-// { value: '4,000+', label: 'Registered Members' },
+// The figures themselves are in git history rather than quoted here, since this repository
+// is public and a comment is as harvestable as a rendered page.
 export const statistics = [
   { value: '300+', label: 'Children Supported in Education' },
   { value: '50+', label: 'Active Volunteers' },
@@ -223,13 +222,13 @@ export const learningCenters = {
     }
   ],
   // SECURITY: two entries reworded below.
-  // 1. "Lack of formal certification for refugee education" read as an admission of
-  //    running unregistered schools at scale, which is an enforcement target. Reframed
-  //    to the real underlying issue: learners have no route to accredited qualifications.
-  //    Previous value: "Lack of formal certification for refugee education"
-  // 2. "Decreased child labor risks through consistent schooling" implied child labour
-  //    is present in the community and reframes trivially into a damaging headline.
-  //    Previous value: "Decreased child labor risks through consistent schooling"
+  // 1. The old certification line read as an admission of running unregistered schools at
+  //    scale, which is an enforcement target. Reframed to the real underlying issue:
+  //    learners have no route to accredited qualifications.
+  // 2. The old schooling-impact line implied unlawful child employment exists in the
+  //    community, which reframes trivially into a damaging headline.
+  // Both original strings are in git history rather than quoted here, since this repository
+  // is public.
   challenges: [
     "Limited funding for teachers and school materials",
     "Few pathways for learners to gain formally recognised qualifications",
