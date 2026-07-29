@@ -125,8 +125,8 @@ export const seoConfig = {
         // SECURITY: refugee headcount removed from the social-share description. This text is
         // what appears on every Facebook/X/WhatsApp preview of the site, so it was the most
         // widely-circulated copy CEAM publishes — and aggregate population figures are the
-        // standard hook for "flooding" framing. Previous value:
-        // "Supporting 8,000+ K'Cho refugees through education, shelter, and community programs"
+        // standard hook for "flooding" framing. The old string is in git history rather than
+        // quoted here, since this repository is public.
         description: "Supporting the K'Cho community in Malaysia through education, shelter, and community programs",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',
@@ -283,7 +283,7 @@ export const seoConfig = {
       openGraph: {
         title: "Donate to CEAM - Transform Lives Today",
         // SECURITY: refugee headcount removed (see note on the home page description above).
-        // Previous value: "Support 8,000+ K'Cho refugees through education, shelter, and community programs"
+        // Old string kept in git history only, not quoted here.
         description: "Support K'Cho refugee families through education, shelter, and community programs",
         images: [{
           url: 'https://ceamalaysia.org/images/cea-social-share.png',

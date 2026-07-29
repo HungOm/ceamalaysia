@@ -29,7 +29,8 @@ export const organizationInfo = {
   // raw material for "flooding"/"invasion" framing in hostile campaigns, and this
   // figure was never rendered anywhere on the site. Referral partners who need
   // demographic figures should be given them privately, not via a public page.
-  // Previous value: 'An estimated 4,000 to 8,000 K\'Cho refugees currently reside in Malaysia'
+  // The figure itself is left in git history rather than quoted here, since a comment in
+  // a public repository is just as harvestable as a rendered page.
     language: {
       primary: "K'Cho (Mün dialect)",
       secondary: "Dai (Daai), Daa Yindu, and Ng'Gah dialects",
@@ -264,13 +265,10 @@ export const shelterServices = {
   // publicly as the individual responsible for the facility, and gave anyone a direct
   // channel into a building housing separated children and survivors of exploitation.
   // Route enquiries through the shared org line so no one person carries that exposure.
-  // Previous value (do not restore without a safeguarding review):
-  // contact: {
-  //   name: "Bosco Om Maung",
-  //   role: "CEAM Shelter In-Charge",
-  //   phone: "+60 17-953 3189",
-  //   whatsapp: "https://wa.me/60179533189"
-  // },
+  // The superseded personal contact block is intentionally NOT reproduced here: this
+  // repository is public, so a comment is as readable as live code and would have kept
+  // his name and mobile exposed. Recover it from git history if a safeguarding review
+  // ever calls for it.
   contact: {
     name: "CEAM Protection Team",
     role: "Shelter Referrals & Enquiries",
@@ -311,15 +309,10 @@ export const shelterServices = {
   // status about identifiable individuals. Shelters serving survivors keep both the
   // location and the resident profile confidential. Assessment criteria are still shared
   // in full with UNHCR and referral partners through private channels.
-  // Previous value (do not restore to a public page):
-  // eligibility: [
-  //   "Individuals with mental health conditions requiring additional care",
-  //   "Persons with physical disabilities or chronic illnesses",
-  //   "Elderly refugees without family support",
-  //   "Single parents in urgent crisis situations",
-  //   "Unaccompanied or separated children",
-  //   "Survivors of exploitation, trafficking, or severe trauma"
-  // ],
+  // The superseded list of resident vulnerability categories is deliberately not quoted
+  // here. This repository is public, so restating it in a comment would leak the same
+  // resident profile the change set out to protect. It remains in git history if a
+  // safeguarding review needs it.
   eligibility: [
     "Referrals are accepted from UNHCR, partner agencies, and recognised community leaders",
     "Each referral is assessed individually against urgency of need and current capacity",
